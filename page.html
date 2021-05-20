@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>mise en page</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<link rel="stylesheet" media="screen and (max-width: 552px)" href="mobile.css">
+<link rel="stylesheet"  media="screen and (min-width: 552px)"href="laptop.css">
+<style>
+	/* SI ecran mobile*/
+	@media screen and (max-width: 768px) 
+	{
+  
+		  body {
+		    background-color: tomato;
+		  }
+	}
+	/* SI ecran mobile*/
+		@media screen and (min-width: 768px) and (max-width: 1100px)
+	{
+	/*-------*/
+		@media screen and (min-width: 1100px) 
+	{
+  
+		  body {
+		    background-color: beige;
+		  }
+	}
+	/*-------*/
+	body{
+		font-family: 'Raleway', sans-serif;
+	}
+	.bleu{color:blue!important;}
+	.beige{color:beige;}
+	.tomato{color:tomato;}
+	.container{
+		width:30%;
+		min-height:200px; 
+		background-color: #ccc;
+		margin-top:100px;
+		margin-left:auto;
+		margin-right:auto;
+		display:flex;
+		flex-wrap: wrap;
+		padding-top:20px;
+	 }
+	 .bg-beige{background-color: beige;}
+	 .bg-tomato{background-color: tomato;}
+	 .my-div-good{
+	 	width:30%;
+	 	min-height:100px;
+	 	/*float:left;*/
+	 	text-align: center;
+
+	 }
+	 .my-div-good div{
+	 	margin-top:40px;
+	 }
+	/* .retour{clear:left;}*/
+</style>
+</head>
+<body>
+	<h1 class="bleu tomato beige"><i class="fas fa-map-marker-alt"></i> Mon titre</h1>
+	<div class="container">
+		<div class="my-div-good bg-beige">
+			<div> A</div>
+		</div>
+		<div class="my-div-good bg-tomato retour">B</div>
+		<div class="my-div-good bg-beige">C</div>
+		<div class="my-div-good bg-tomato">D</div>
+	</div>
+</body>
+</html>
