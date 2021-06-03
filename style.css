@@ -5,35 +5,35 @@ body {
 }
 
 
-body
+body /*Fond de la page entière*/
 {
 	font-family: 'Raleway', sans-serif;
 	margin: 0;
 }
-header
+header /*Mettre en flex le header*/
 {
 	display: flex;
 }
-.central, header 
+.central, header /*Faire en sorte que le page ne prenne que 90% de la place disponible*/
 {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 }
-.logo
+.logo /*Logo*/
 {
 	width: 20%;
 	height: 70px;
 	padding: 2em;
 	padding-left: 0px;
 }
-.droite
+.droite /*Boutons en haut*/
 {
 	width: 80%;
 	display: flex;
 	justify-content: flex-end;
 }
-nav.droite ul
+nav.droite ul /*Mise en forme des boutons en haut*/
 {
 	list-style: none;/* enlever puces */
 	padding: 0;/* enleve le padding left de 20 px */
@@ -43,15 +43,15 @@ nav.droite li
 {
 	float: left;
 }
-nav.droite a
+nav.droite a /*Regroupement des boutons en haut*/
 {
-	display: block; /* Par défaut display: inline, pas de marging pasde padding */
+	display: block; /* Par défaut display: inline, pas de marging pas de padding */
 	padding: 30px;
 	color: #444;
 	text-decoration: none; /* on enleve le soulignage*/
 	border-top: solid 2px #fff;
 }
-nav.droite a:hover
+nav.droite a:hover 
 {
 	color: #0065FC;
 	background-color: #eee;
@@ -59,33 +59,33 @@ nav.droite a:hover
 	transform: scale(1.015)
 }
 
-.inscription
+.inscription /*Bouton s'inscrire*/
 {
 	color: #0065FC !important;
 	font-weight: bold;
 }
 
-a.active
+a.active /*Partie active en haut*/
 {
 	border-top: solid 2px #0065FC !important; 
 	color: #0065FC !important;
 }
-.titre
+.titre /*Titre*/
 {
 	margin-bottom: 0.5em;
 	font-weight: bold;
 }
-.soustitre
+.soustitre /*Texte en dessous du titre*/
 {
 	margin-top: 0px;
 	margin-bottom: 2em;
 }
 
-.searchzone
+.searchzone /*Partie entière de recherche*/
 {
 	display: flex;
 }
-.fa-map-marker-alt
+.fa-map-marker-alt /*Icone de recherche*/
 {
 	padding: 1.1em;
 	background-color: #F2F2F2;
@@ -94,7 +94,7 @@ a.active
 	max-height: 3.15em;
 	text-align: center;
 }
-.searchbar
+.searchbar /*Barre de recherche*/
 {
 	border-right: none;
 	border-left: none;
@@ -108,7 +108,7 @@ a.active
 	font-family: "Raleway", "Sans serif";
 }
 
-.searchbutton
+.searchbutton /*Bouton de recherche*/
 {
 	border: none;
 	border-radius: 0em 1.2em 1.2em 0em;
@@ -123,44 +123,42 @@ a.active
 	text-align: center;
 }
 
-.searchbutton:hover
+.searchbutton:hover /* Faire en sorte que le bouton recherche grossise lorsque l'on passe la souris au-dessus */
 {
 	transform: scale(1.015);
 	background-color: #0065FF;
 }
 
-.filtres
+.filtres /*Partie des filtres*/
 {
 	display: flex;
-	flex-position: flex-start;
 	font-family: "Raleway", "Sans serif";
 }
 
-.filtrestext
+.filtrestext /*Texte des filtres*/
 {
 	text-align: center;
-	/*background-color: red;*/
-	padding-left: 0px;
-	margin-left: 0px;
+	padding-left: 0em;
+	margin-left: 0em;
 	font-family: "Raleway", "Sans serif";
 }
 
-.filtresbuttons
+.filtresbuttons /*Contour des boutons des filtres*/
 {
 	background-color: white;
 	border: solid #F2F2F2;
 	margin-right: 1.2em;
-	margin-left: 0px;
+	margin-left: 0em;
+	margin-left: 1em;
 	border-radius: 1.5em 1.5em 1.5em 1.5em;
 	height: 2.5em;
 	font-weight: bold;
 	font-size: 1em;
-	/*padding-left: 3em;*/
 	padding-right: 1.4em;
 	font-family: "Raleway", "Sans serif";
 }
 
-.fa-money-bill-wave, .fa-child, .fa-dog, .fa-heart
+.fa-money-bill-wave, .fa-child, .fa-dog, .fa-heart /*Icones des filtres*/
 {
 	border: none;
 	border-radius: 3em;
@@ -173,51 +171,50 @@ a.active
 	color: #0065FC;
 }
 
-.filtresbuttons:hover
+.filtresbuttons:hover /* Faire en sorte que les textes filtres réagissent (passent à la couleur bleu sur fond gris) lorsque l'on passe la souris au-dessus */
 {
 	cursor: pointer;
 	background-color: #F2F2F2;
 	color: #0065FC;
 }
 
-.filtresbuttons:hover i
+.filtresbuttons:hover i /* Faire en sorte que les icones filtres réagissent (passent à la couleur noir) lorsque l'on passe la souris au-dessus */
 {
 	color: black;
 }
 
-.fa-info
+.fa-info /*Bulle info en dessous des filtres*/
 {
 	border-radius: 6em;
 	border: solid 0.1em #F2F2F2;
 	padding: 0.3em;
 	padding-left: 0.6em;
 	padding-right: 0.6em;
-	background-color: white;
+	background-color: #FFF;
 }
-.filtresinfo1
+.filtresinfo1 /*Icone Info en dessous des filtres*/ 
 {
 	display: flex;
 	text-align: center;
-	/*background-color: red;*/
 	max-height: 1.8em;
 	color: #0065FC;
 }
 
-.filtreinfo1text
+.filtreinfo1text /*Texte Info en dessous des filtres*/
 {
 	margin-top: 0.3em;
 	margin-left: 0.3em;
 	color: black;
 }
 
-.hebergementstrending
+.hebergementstrending /*Partie entière Hebergements à Marseille et Les plus populaires*/
 {
 	display: flex;
 	margin-bottom: 2em;
 	margin-top: 1em;
 }
 
-.htitle
+.htitle /*Titre Hebergements à Marseille*/
 {
 	display: flex;
 	margin-left: 1.3em;
@@ -225,23 +222,36 @@ a.active
 	font-weight: bolder;
 }
 
-.hflex
+.htitlealt /*Titre les plus populaires*/
+{
+	margin-left: 0.3em;
+	display: flex;
+	font-size: large;
+	font-weight: bolder;
+}
+
+.fa-chart-line /*Icone dans les plus populaires*/
+{
+	text-align-last: end;
+	padding-left: 13.9em;
+}
+
+
+.hflex /*Faire en sorte que le display soit mis en flex*/
 {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.hebergements
+.hebergements /*Partie hebergements à Marseille*/
 {
 	background-color: #F2F2F2;
 	border-radius: 1.8em;
-	width: 70%;
+	width: 76%;
 	padding: 2em;
-	/*display: flex;
-	flex-wrap: wrap;*/
 }
 
-.producth
+.producth /*Partie entière de l'hebergement dans hebergement*/
 {
 	border-bottom: solid #FFF 0.9em;
 	background-color: #FFF;
@@ -251,21 +261,14 @@ a.active
 	width: 18em;
 }
 
-.producthinfo
+.producthinfo /*Partie infos de l'hebergement dans hebergements*/
 {
-	padding-left: 0.5em;
+	padding-left: 1.3em;
 	font-size: small;
 }
 
-.imagesh
+.imagesh /*Image de l'hebergement dans hebergements*/
 {
-	/*height: 8.8em;
-	padding-right: auto;
-	padding-left: auto;
-	display: grid;
-	border-radius: 1.6em 1.6em 0em 0em;
-	background-color: white;
-	max-height: 9em;*/
 	object-fit: cover;
 	width: 17.4em;
 	height: 8em;
@@ -274,118 +277,232 @@ a.active
 	border:  solid #FFF 0.3em;
 }
 
-.imagesdesc
+.imagesdesc /*Nom de  l'hebergement dans hebergements*/
 {
-	background-color: #FFF;
 	display: grid;
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
 	font-family: "Raleway", "Sans serif";
 	font-weight: bold;
+	font-size: medium;
 }
 
-.imagesdescsub
+.imagesdescsub /*Prix de l'hebergement dans hebergements */
 {
-	background-color: #FFF;
 	padding-top: 0.3em;
 	padding-bottom: 0.2em;
 	font-family: "Raleway", "Sans serif";
+	font-size: medium;
 }
 
-.producthalt
+.producthalt /*Partie entière de l'hebergement dans les plus populaires*/
 {
 	display: flex;
+	margin-bottom: 2em;
+	margin-top: 2em;
+	max-width: fit-content;
 }
 
-.producthinfoalt
+.producthinfoalt /*Partie infos de l'hebergement dans les plus populaires*/
 {
 	padding-left: 0.5em;
-	font-size: small;
-	display: flex;
+	font-size: bold;
+	background-color: #FFF;
+	width: 16em;
+	border-bottom-right-radius: 1.4em;
+	border-top-right-radius: 1.4em;
 }
 
-.imageshalt
+.imageshalt /*Image de l'hebergement dans les plus populaires*/
 {
 	object-fit: cover;
 	border-top-left-radius: 1.4em;
 	border-bottom-left-radius: 1.4em;
-	width: 8em;
-	height: 8em;
+	width: 10em;
+	height: 10em;
 	border:  solid #FFF 0.3em;
+	border-right: solid #FFF 1em;
 }
 
-.imagesdescalt
+.imagesdescalt /*Nom de  l'hebergement dans les plus populaires*/
 {
-	background-color: #FFF;
-	display: grid;
-	padding-top: 0.2em;
+	display: flex;
+	padding-top: 0.9em;
 	padding-right: 0.5em;
 	font-family: "Raleway", "Sans serif";
+	font-size: 1.2em;
 	font-weight: bold;
+	text-align: left;
+	width: 80%;
 }
 
-.staron
+.imagesdescsubalt /*Prix de l'hebergement dans les plus populaires*/
+{
+	padding-top: 0.5em;
+	padding-bottom: 3em;
+	font-family: "Raleway", "Sans serif";
+}
+
+.staron /*Etoile bleue (Activée)*/
 {
 	color: #0065FC;
 }
 
-.staroff
+.staroff /*Etoile grise (Non activée)*/
 {
 	background-color: #FFF;
 	color: #F2F2F2;
 	margin-left: -0.2em;
 }
 
-.seemore
+.seemore /*Partie Afficher plus*/
 {
 	display: grid;
 	font-weight: bold;
 	width: 20em;
 	margin: 1.3em;
+	max-width: fit-content;
+	font-size: large;
 }
 
-.seemore:hover
+.seemore:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/
 {
 	text-decoration: underline;
 	cursor: pointer;
 }
 
-.espace
+.espace /*Espace entre Hébergements et les plus populaires*/
 {
 	margin: 1em;
 }
 
-.populaires
+.populaires /*Partie les plus populaires*/
 {
 	background-color: #F2F2F2;
 	border-radius: 1.6em;
-	width: 30%;
+	width: 27%;
 	padding: 2em;
 }
 
-.activitys
+.activitys /*Partie activité*/
 {
 	display: flex;
 	margin-bottom: 2em;
-	margin-top: 1em;
+	margin-top: -3em;
 }
 
-.activity
+.activity /*Centrage partie activité*/
 {
-	background-color: #F2F2F2;
 	border-radius: 1.8em;
 	width: 100%;
 	padding: 2em;
-	/*display: flex;
-	flex-wrap: wrap;*/
 }
 
-footer
+.acollumn1 /*Colonne 1*/
+{
+	width: 25%;
+	max-height: 40em;
+}
+.acollumn2 /*Colonne 2*/
+{
+	width: 25%;
+	max-height: 40em;
+}
+.acollumn3 /*Colonne 3*/
+{
+	width: 25%;
+	max-height: 40em;
+}
+.acollumn4 /*Colonne 4*/
+{
+	width: 25%;
+	max-height: 40em;
+}
+
+.producta /*Produit de la partie activités*/
+{
+	border-bottom: solid #FFF 0.9em;
+	background-color: #FFF;
+	border-radius: 1.4em;
+	margin: 1.3em;
+	box-shadow: 0px 0px 50px rgb(209, 209, 209);
+	width: 22.5em;
+}
+
+.productainfo /*Bloc de la description de la partie activités*/
+{
+	padding-left: 1.3em;
+	padding-bottom: 0.7em;
+	padding-top: 1.2em;
+}
+
+.imagesdesca /*Description de l'image dans la partie activités*/
+{
+	font-family: "Raleway", "Sans serif";
+	font-weight: bold;
+	font-size: large;
+}
+
+.imagesa1 /*Image 1*/
+{
+	object-fit: cover;
+	border-top-left-radius: 1.4em;
+	border-top-right-radius: 1.4em;
+	height: 31.7em;
+	width: 22.5em;
+}
+
+.imagesa21 /*Image 2*/
+{
+	object-fit: cover;
+	border-top-left-radius: 1.4em;
+	border-top-right-radius: 1.4em;
+	height: 15em;
+	width: 100%;
+}
+
+.imagesa22 /*Image 3*/
+{
+	object-fit: cover;
+	border-top-left-radius: 1.4em;
+	border-top-right-radius: 1.4em;
+	height: 11em;
+	width: 100%;
+}
+
+.imagesa3 /*Image 4*/
+{
+	object-fit: cover;
+	border-top-left-radius: 1.4em;
+	border-top-right-radius: 1.4em;
+	height: 31.7em;
+	width: 100%;
+}
+
+.imagesa41 /*Image 5*/
+{
+	object-fit: cover;
+	border-top-left-radius: 1.4em;
+	border-top-right-radius: 1.4em;
+	height: 11em;
+	width: 100%;
+}
+
+.imagesa42 /*Image 6*/
+{
+	object-fit: cover;
+	border-top-left-radius: 1.4em;
+	border-top-right-radius: 1.4em;
+	height: 15em;
+	width: 100%;
+}
+/*Section Footer*/
+footer /*Partie globale du footer*/
 {
 	background-color: #F2F2F2;
 }
 
-.foot
+.foot /*Partie centrée du footer*/
 {
 	display: flex;
 	width: 90%;
@@ -393,67 +510,47 @@ footer
 	margin-right: auto;
 }
 
-.about
+.about /*Partie à propos*/
 {
-	/*background-color: red;*/
 	width: 33%;
 }
 
-.noshebergements
+.noshebergements /*Partie Nos Hebergements*/
 {
-	/*background-color: blue;*/
 	width: 33%;
 }
 
-.help
+.help /*Partie Aide*/
 {
-	/*background-color: violet;*/
 	width: 34%;
 }
 
-.clickeable:hover
+.clickeable:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/
 {
 	cursor: pointer;
 	text-decoration: underline;
 }
 
-/* 
+.clickeable /*Faire en sorte que le texte ne prenne pas toute la place dans sa colonne*/
+{
+max-width: fit-content;
+}
 
+@media screen and (max-width: 992px) {
+
+
+
+
+
+
+
+
+
+}
+
+
+/* 
 object-fit: cover; -permet d'arrondir l'image.
 
 display: flex;
-  flex-wrap: wrap;
-
-.menu
-{
-	padding-right:20px; 
-	padding-left:20px;
-	height: 20px;
-	background-color: yellow;
-}
-.inscrire
-{
-	color: blue;
-	padding-right:20px; 
-	padding-left:20px;
-	height: 20px;
-	background-color: yellow;
-}
-.menu:hover
-{
-	color: #0065FC;
-}
-
-h1
-{
-	width: 600px;
-	font-size: 20px;
-	margin-bottom: 1px
-	padding-top: 0px;
-}
-h2
-{
-	margin-top: 8px;
-	font-size: 15px;
-	font-weight: 500;
-}
+  flex-wrap: wrap; */
