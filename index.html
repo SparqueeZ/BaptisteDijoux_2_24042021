@@ -2,9 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Réservia</title>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
@@ -12,18 +11,22 @@
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
 		<!--Section Header-->
-			<header>
+			<header id="acceuil">
 				<div class="logo"><img src="images/logo/Reservia.svg" ></div>
+				<div class="topphone">
+					<div class="logophone"><img src="images/logo/Reservia.svg" ></div>
+					<a href="#" class="inscriptionphone">S'inscrire</a>
+				</div>
 				<nav class="droite">
-					<ul>
-						<li ><a class="active" href="#">Hébergements</a></li>
-						<li ><a href="#">Activités</a></li>
-						<li ><a href="#" class="inscription">S'inscrire</a></li>
-					</ul>
+					<a class="active" href="#">Hébergements</a>
+					<a href="#activité">Activités</a>
+					<a href="#" class="inscription">S'inscrire</a>
 				</nav>
 
 			</header>
@@ -40,14 +43,15 @@
 						<i class="fas fa-map-marker-alt"></i>
 						<input class="searchbar" type="search" placeholder="Marseille, France" size="1">
 						<button class="searchbutton">Rechercher</button>
+						<button class="searchbuttonicon"><i class="fas fa-search"></i> </button>
 					</div>
 					<div class="filtres">
-						<h3 class="filtrestext">Filtres
+						<h3 class="filtrestext">Filtres	</h3>
 								<button class="filtresbuttons"><i class="fas fa-money-bill-wave"></i>Economique</button>
 								<button class="filtresbuttons"><i class="fas fa-child"></i>Familial</button>
 								<button class="filtresbuttons"><i class="fas fa-heart"></i>Romantique</button>
 								<button class="filtresbuttons"><i class="fas fa-dog"></i>Animaux autorisés</button>
-						</h3>
+					
 					</div>
 					<div class="filtresinfo1">
 						<i class="fas fa-info"></i>
@@ -57,7 +61,7 @@
 			</section>
 
 			<!--Section Hébergements à Marseille-->
-			<section class="central">
+			<section>
 				<div class="hebergementstrending">
 					<div class="hebergements">
 						<p class="htitle"><strong>Hébergements à Marseille</strong></p>
@@ -125,7 +129,10 @@
 						</div>
 						<div><p class=seemore>Afficher plus</p></div>
 					</div>
+					<!--Espace entre les 2 sections-->
 					<div class="espace">&nbsp</div>
+					<!--Section Les plus populaires-->
+					<div class="backfamous">
 					<div class="populaires">
 						<p class="htitlealt"><strong>Les plus populaires</strong><i class="fas fa-chart-line"></i></p>
 						<div class="producthalt"><img class="imageshalt" src="images\hebergements\small\hotel-le-soleil-du-matin.jpg" alt="Hôtel de la mer">
@@ -158,11 +165,12 @@
 								</figcaption>
 							</div>
 					</div>
+					</div>
 				</div>
 			</section>
 
-			<!--Section Activités à Marseille-->*
-			<section class="central">
+			<!--Section Activités à Marseille-->
+			<section id="activité">
 				<div class="activitys">
 					<div class="activity">
 						<p class="htitle"><strong>Activités à Marseille</strong></p>
@@ -212,19 +220,19 @@
 				<div class="foot">
 					<div class="about">
 						<p><strong>A propos</strong></p>
-						<p class="clickeable">Fontcionnement du site</p>
-						<p class="clickeable">Conditions générales de vente</p>
-						<p class="clickeable">Données et confidentialité</p>
+						<a href="#acceuil" class="clickeable">Fontcionnement du site</a>
+						<a href="#acceuil" class="clickeable">Conditions générales de vente</a>
+						<a href="#acceuil" class="clickeable">Données et confidentialité</a>
 					</div>
 					<div class="noshebergements">
 						<p><strong>Hébergements</strong></p>
-						<p class="clickeable">Charte qualité</p>
-						<p class="clickeable">Soumettre votre hôtel</p>
+						<a href="#acceuil" class="clickeable">Charte qualité</a>
+						<a href="#acceuil" class="clickeable">Soumettre votre hôtel</a>
 					</div>
 					<div class="help">
 						<p><strong>Assistance</strong></p>
-						<p class="clickeable">Centre d'aide</p>
-						<p class="clickeable">Nous contacter</p>
+						<a href="#acceuil" class="clickeable">Centre d'aide</a>
+						<a href="#acceuil" class="clickeable">Nous contacter</a>
 					</div>
 				</div>
 			</footer>
