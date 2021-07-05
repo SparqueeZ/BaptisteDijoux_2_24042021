@@ -12,6 +12,7 @@ body /*Fond de la page entière*/
 }
 /* ordi de bureau */
 @media screen and (min-width: 1200px) {
+
 header /*Mettre en flex le header*/
 {
 	display: flex;
@@ -258,6 +259,7 @@ a.active /*Partie active en haut*/
 {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .hebergements /*Partie hebergements à Marseille*/
@@ -460,8 +462,6 @@ a.active /*Partie active en haut*/
 	margin: 1.3em;
 	box-shadow: 0px 0px 50px rgb(209, 209, 209);
 	width: 90%;
-	overflow: hidden;
-
 }
 
 .productainfo /*Bloc de la description de la partie activités*/
@@ -485,12 +485,6 @@ a.active /*Partie active en haut*/
 	border-top-right-radius: 1.4em;
 	height: 31.7em;
 	width: 100%;
-	transition: 0.2s all ease-in-out;
-}
-
-.imagesa1:hover
-{
-	transform: scale(1.5);
 }
 
 .imagesa21 /*Image 2*/
@@ -500,12 +494,6 @@ a.active /*Partie active en haut*/
 	border-top-right-radius: 1.4em;
 	height: 15em;
 	width: 100%;
-	transition: 0.2s all ease-in-out;
-}
-
-.imagesa21:hover
-{
-	transform: scale(1.5);
 }
 
 .imagesa22 /*Image 3*/
@@ -515,12 +503,6 @@ a.active /*Partie active en haut*/
 	border-top-right-radius: 1.4em;
 	height: 11em;
 	width: 100%;
-	transition: 0.2s all ease-in-out;
-}
-
-.imagesa22:hover
-{
-	transform: scale(1.5);
 }
 
 .imagesa3 /*Image 4*/
@@ -530,12 +512,6 @@ a.active /*Partie active en haut*/
 	border-top-right-radius: 1.4em;
 	height: 31.7em;
 	width: 100%;
-	transition: 0.2s all ease-in-out;
-}
-
-.imagesa3:hover
-{
-	transform: scale(1.5);
 }
 
 .imagesa41 /*Image 5*/
@@ -545,12 +521,6 @@ a.active /*Partie active en haut*/
 	border-top-right-radius: 1.4em;
 	height: 11em;
 	width: 100%;
-	transition: 0.2s all ease-in-out;
-}
-
-.imagesa41:hover
-{
-	transform: scale(1.5);
 }
 
 .imagesa42 /*Image 6*/
@@ -560,11 +530,6 @@ a.active /*Partie active en haut*/
 	border-top-right-radius: 1.4em;
 	height: 15em;
 	width: 100%;
-	transition: 0.2s all ease-in-out;
-}
-.imagesa42:hover
-{
-	transform: scale(1.5);
 }
 
 /*Section Footer*/
@@ -614,15 +579,6 @@ footer /*Partie globale du footer*/
 
 @media screen and (max-width: 768px) {
 
-body
-{
-	/*background-color: tomato;*/
-}
-
-header /*Mettre en flex le header*/
-{
-	
-}
 .central /*Faire en sorte que le page ne prenne que 90% de la place disponible*/
 {
 	width: 90%;
@@ -645,10 +601,18 @@ header /*Mettre en flex le header*/
 	margin-top: 1em;
 }
 
+.ins 
+{
+	margin-top: 30px;
+	text-align: right;
+	margin-right: 1em;
+	width: 50%;
+}
 .logophone
 {
-	display: flex;
-	margin-left: 1em;
+	padding-left: 2em;
+	padding-top: 1em;
+	width: 50%;
 }
 
 .droite /*Boutons en haut*/
@@ -659,11 +623,18 @@ header /*Mettre en flex le header*/
 
 nav.droite a /*Regroupement des boutons en haut*/
 {
-	padding: 30px;
+	padding: 2em;
 	color: #444;
 	text-decoration: none; /* on enleve le soulignage*/
 	border-bottom: solid 0.2em #F2F2F2;
 	width: 50%;
+	text-align: center;
+}
+
+.test
+{
+    display: flex;
+	flex-direction: column-reverse;
 }
 
 nav.droite a:hover 
@@ -680,7 +651,6 @@ nav.droite a:hover
 	font-weight: bold;
 	margin-top: 1em;
 	text-decoration: none;
-	padding-left: 11em;
 }
 
 a.inscription
@@ -1127,16 +1097,7 @@ footer /*Partie globale du footer*/
 }
 }
 @media screen and (min-width: 768px) and (max-width:1200px) {
-
-	body
-	{
-		/*background-color: tomato;*/
-	}
 	
-	header /*Mettre en flex le header*/
-	{
-		
-	}
 	.central /*Faire en sorte que le page ne prenne que 90% de la place disponible*/
 	{
 		width: 90%;
@@ -1145,10 +1106,6 @@ footer /*Partie globale du footer*/
 	}
 	.logo /*Logo*/
 	{
-		width: 20%;
-		height: 70px;
-		padding: 0em;
-		padding-left: 0px;
 		display: none;
 	}
 	
@@ -1158,11 +1115,19 @@ footer /*Partie globale du footer*/
 		margin-bottom: 1em;
 		margin-top: 1em;
 	}
-	
+
+	.ins 
+	{
+		margin-top: 10px;
+		text-align: right;
+		margin-right: 30px;
+		width: 50%;
+	}
 	.logophone
 	{
-		display: flex;
-		margin-left: 1em;
+		margin-left: 2em;
+		margin-top: 1em;
+		width: 50%;
 	}
 	
 	.droite /*Boutons en haut*/
@@ -1178,6 +1143,7 @@ footer /*Partie globale du footer*/
 		text-decoration: none; /* on enleve le soulignage*/
 		border-bottom: solid 0.2em #F2F2F2;
 		width: 50%;
+		text-align: center;
 	}
 	
 	nav.droite a:hover 
@@ -1192,9 +1158,7 @@ footer /*Partie globale du footer*/
 	{
 		color: #0065FC !important;
 		font-weight: bold;
-		margin-top: 1em;
 		text-decoration: none;
-		padding-left: 11em;
 	}
 	
 	a.inscription
@@ -1408,7 +1372,7 @@ footer /*Partie globale du footer*/
 		border-radius: 1.4em;
 		margin: 1.3em;
 		box-shadow: 0px 0px 50px rgb(209, 209, 209);
-		width: 90%;
+		width: 40%;
 	}
 	
 	.producthinfo /*Partie infos de l'hebergement dans hebergements*/
@@ -1445,12 +1409,17 @@ footer /*Partie globale du footer*/
 		font-family: "Raleway", "Sans serif";
 		font-size: medium;
 	}
+
+	.fproducts
+	{
+		display: flex;
+		flex-wrap: wrap;
+	}
 	
 	.producthalt /*Partie entière de l'hebergement dans les plus populaires*/
 	{
 		display: flex;
-		margin-bottom: 2em;
-		margin-top: 2em;
+		margin: 0.5em;
 		max-width: fit-content;
 	}
 	
@@ -1527,6 +1496,13 @@ footer /*Partie globale du footer*/
 	{
 		background-color: #F2F2F2;
 	}
+
+	.activity
+	{
+		width: 95%;
+		margin: 0em;
+		justify-content: center;
+	}
 	
 	.populaires /*Partie les plus populaires*/
 	{
@@ -1536,13 +1512,35 @@ footer /*Partie globale du footer*/
 		margin-right: auto;
 		
 	}
+	.acollumn1 /*Colonne 1*/
+	{
+		max-width: 25%;
+		max-height: 40em;
+	}
+	.acollumn2 /*Colonne 2*/
+	{
+		max-width: 25%;
+		max-height: 40em;
+	}
+	.acollumn3 /*Colonne 3*/
+	{
+		max-width: 25%;
+		max-height: 40em;
+	}
+	.acollumn4 /*Colonne 4*/
+	{
+		max-width: 25%;
+		max-height: 40em;
+	}
+	
 	.imagesa1 /*Image 1*/
 	{
 		object-fit: cover;
 		border-top-left-radius: 1.4em;
 		border-top-right-radius: 1.4em;
-		height: 8em;
+		height: 33em;
 		width: 100%;
+		justify-content: center;
 	}
 	
 	.imagesa21 /*Image 2*/
@@ -1550,7 +1548,7 @@ footer /*Partie globale du footer*/
 		object-fit: cover;
 		border-top-left-radius: 1.4em;
 		border-top-right-radius: 1.4em;
-		height: 8em;
+		height: 16em;
 		width: 100%;
 	}
 	
@@ -1559,7 +1557,7 @@ footer /*Partie globale du footer*/
 		object-fit: cover;
 		border-top-left-radius: 1.4em;
 		border-top-right-radius: 1.4em;
-		height: 8em;
+		height: 12.8em;
 		width: 100%;
 	}
 	
@@ -1568,7 +1566,7 @@ footer /*Partie globale du footer*/
 		object-fit: cover;
 		border-top-left-radius: 1.4em;
 		border-top-right-radius: 1.4em;
-		height: 8em;
+		height: 31.7em;
 		width: 100%;
 	}
 	
@@ -1577,7 +1575,7 @@ footer /*Partie globale du footer*/
 		object-fit: cover;
 		border-top-left-radius: 1.4em;
 		border-top-right-radius: 1.4em;
-		height: 8em;
+		height: 12.8em;
 		width: 100%;
 	}
 	
@@ -1586,20 +1584,19 @@ footer /*Partie globale du footer*/
 		object-fit: cover;
 		border-top-left-radius: 1.4em;
 		border-top-right-radius: 1.4em;
-		height: 8em;
+		height: 16em;
 		width: 100%;
 	}
 	
-	.producta /*Produit de la partie activités*/
-	{
-		border-bottom: solid #FFF 0.9em;
-		background-color: #FFF;
-		border-radius: 1.4em;
-		margin: 1.3em;
-		box-shadow: 0px 0px 50px rgb(209, 209, 209);
-		width: 90%;
-		font-family: "Raleway", "Sans serif";
-	}
+.producta /*Produit de la partie activités*/
+{
+	border-bottom: solid #FFF 0.9em;
+	background-color: #FFF;
+	border-radius: 1.4em;
+	margin: 1.3em;
+	box-shadow: 0px 0px 50px rgb(209, 209, 209);
+	width: 90%;
+}
 	
 	.imagesdesca /*Description de l'image dans la partie activités*/
 	{
@@ -1623,6 +1620,22 @@ footer /*Partie globale du footer*/
 		margin-right: auto;
 		padding-top: 1em;
 		padding-bottom: 1em;
+		display: flex;
+	}
+
+	.about /*Partie à propos*/
+	{
+		width: 33%;
+	}
+
+	.noshebergements /*Partie Nos Hebergements*/
+	{
+		width: 33%;
+	}
+
+	.help /*Partie Aide*/
+	{
+		width: 34%;
 	}
 	
 	.clickeable:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/
