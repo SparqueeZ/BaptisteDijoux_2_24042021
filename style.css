@@ -278,7 +278,6 @@ body /*Fond de la page entière*/ {
 
   .producthinfoalt /*Partie infos de l'hebergement dans les plus populaires*/ {
     padding-left: 0.5em;
-    font-size: bold;
     background-color: #fff;
     width: 16em;
     max-height: 10.6em;
@@ -358,8 +357,6 @@ body /*Fond de la page entière*/ {
     padding: 2em;
     height: 92.5%;
     height: fit-content;
-    padding-top: auto;
-    padding-bottom: auto;
   }
 
   .activitys /*Partie activité*/ {
@@ -786,7 +783,6 @@ body /*Fond de la page entière*/ {
 
   .producthinfoalt /*Partie infos de l'hebergement dans les plus populaires*/ {
     padding-left: 0.5em;
-    font-size: bold;
     background-color: #fff;
     width: 16em;
     border-bottom-right-radius: 1.4em;
@@ -1232,7 +1228,6 @@ body /*Fond de la page entière*/ {
 
   .producthinfoalt /*Partie infos de l'hebergement dans les plus populaires*/ {
     padding-left: 0.5em;
-    font-size: bold;
     background-color: #fff;
     width: 16em;
     border-bottom-right-radius: 1.4em;
