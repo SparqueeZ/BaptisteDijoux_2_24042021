@@ -4,1658 +4,1431 @@ body {
   margin: 0;
 }
 
-
-body /*Fond de la page entière*/
-{
-	font-family: 'Raleway', sans-serif;
-	margin: 0;
+body /*Fond de la page entière*/ {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
 }
 /* ordi de bureau */
 @media screen and (min-width: 1200px) {
+  header /*Mettre en flex le header*/ {
+    display: flex;
+  }
+  .central, header /*Faire en sorte que le page ne prenne que 90% de la place disponible*/ {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo /*Logo*/ {
+    width: 20%;
+    height: 70px;
+    padding: 2em;
+    padding-left: 0px;
+  }
+  .droite /*Boutons en haut*/ {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    height: 5em;
+  }
+  nav.droite ul /*Mise en forme des boutons en haut*/ {
+    list-style: none; /* enlever puces */
+    padding: 0; /* enleve le padding left de 20 px */
+    margin-top: 0;
+  }
+  nav.droite li {
+    float: left;
+  }
+  nav.droite a /*Regroupement des boutons en haut*/ {
+    display: block; /* Par défaut display: inline, pas de marging pas de padding */
+    padding: 30px;
+    color: #444;
+    text-decoration: none; /* on enleve le soulignage*/
+    border-top: solid 2px #fff;
+  }
+  nav.droite a:hover {
+    color: #0065fc;
+    background-color: #eee;
+    border-top: solid 2px #0065fc;
+    transform: scale(1.015);
+  }
 
-header /*Mettre en flex le header*/
-{
-	display: flex;
-}
-.central, header /*Faire en sorte que le page ne prenne que 90% de la place disponible*/
-{
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
-.logo /*Logo*/
-{
-	width: 20%;
-	height: 70px;
-	padding: 2em;
-	padding-left: 0px;
-}
-.droite /*Boutons en haut*/
-{
-	width: 80%;
-	display: flex;
-	justify-content: flex-end;
-	height: 5em;
-}
-nav.droite ul /*Mise en forme des boutons en haut*/
-{
-	list-style: none;/* enlever puces */
-	padding: 0;/* enleve le padding left de 20 px */
-	margin-top: 0;
-}
-nav.droite li
-{
-	float: left;
-}
-nav.droite a /*Regroupement des boutons en haut*/
-{
-	display: block; /* Par défaut display: inline, pas de marging pas de padding */
-	padding: 30px;
-	color: #444;
-	text-decoration: none; /* on enleve le soulignage*/
-	border-top: solid 2px #fff;
-}
-nav.droite a:hover 
-{
-	color: #0065FC;
-	background-color: #eee;
-	border-top: solid 2px #0065FC;
-	transform: scale(1.015)
-}
+  .inscription /*Bouton s'inscrire*/ {
+    color: #0065fc !important;
+    font-weight: bold;
+  }
 
-.inscription /*Bouton s'inscrire*/
-{
-	color: #0065FC !important;
-	font-weight: bold;
-}
+  .topphone {
+    display: none;
+  }
 
-.topphone
-{
-	display: none;
-}
+  a.active /*Partie active en haut*/ {
+    border-top: solid 2px #0065fc !important;
+    color: #0065fc !important;
+  }
+  .titre /*Titre*/ {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  .soustitre /*Texte en dessous du titre*/ {
+    margin-top: 0px;
+    margin-bottom: 2em;
+  }
 
-a.active /*Partie active en haut*/
-{
-	border-top: solid 2px #0065FC !important; 
-	color: #0065FC !important;
-}
-.titre /*Titre*/
-{
-	margin-bottom: 0.5em;
-	font-weight: bold;
-}
-.soustitre /*Texte en dessous du titre*/
-{
-	margin-top: 0px;
-	margin-bottom: 2em;
-}
+  .searchzone /*Partie entière de recherche*/ {
+    display: flex;
+    margin-bottom: 1.6em;
+  }
+  .fa-map-marker-alt /*Icone de recherche*/ {
+    padding: 1.1em;
+    background-color: #f2f2f2;
+    border-radius: 1.2em 0em 0em 1.2em;
+    width: 1em;
+    max-height: 3.15em;
+    text-align: center;
+  }
+  .searchbar /*Barre de recherche*/ {
+    border-right: none;
+    border-left: none;
+    border-top: #f2f2f2 1px solid;
+    border-bottom: #f2f2f2 1px solid;
+    padding: 1.5em;
+    width: 14em;
+    height: 3em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+  }
 
-.searchzone /*Partie entière de recherche*/
-{
-	display: flex;
-	margin-bottom: 1.6em;
-}
-.fa-map-marker-alt /*Icone de recherche*/
-{
-	padding: 1.1em;
-	background-color: #F2F2F2;
-	border-radius: 1.2em 0em 0em 1.2em;
-	width: 1em;
-	max-height: 3.15em;
-	text-align: center;
-}
-.searchbar /*Barre de recherche*/
-{
-	border-right: none;
-	border-left: none;
-	border-top: #F2F2F2 1px solid;
-	border-bottom: #F2F2F2 1px solid;
-	padding: 1.5em;
-	width: 14em;
-	height: 3em;
-	font-size: 1em;
-	font-weight: bold;
-	font-family: "Raleway", "Sans serif";
-}
+  .searchbutton /*Bouton de recherche*/ {
+    border: none;
+    border-radius: 0em 1.2em 1.2em 0em;
+    background-color: #0065fc;
+    cursor: pointer;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    max-height: 3.15em;
+    font-family: "Raleway", "Sans serif";
+    text-align: center;
+  }
 
-.searchbutton /*Bouton de recherche*/
-{
-	border: none;
-	border-radius: 0em 1.2em 1.2em 0em;
-	background-color: #0065FC;
-	cursor: pointer;
-	padding: 1em;
-	color: white;
-	font-weight: bold;
-	font-size: 1em;
-	max-height: 3.15em;
-	font-family: "Raleway", "Sans serif";
-	text-align: center;
-}
+  .searchbuttonicon {
+    display: none;
+  }
 
-.searchbuttonicon
-{
-	display: none;
-}
+  .searchbutton:hover /* Faire en sorte que le bouton recherche grossise lorsque l'on passe la souris au-dessus */ {
+    transform: scale(1.015);
+    background-color: #0065ff;
+  }
 
+  .filtres /*Partie des filtres*/ {
+    display: flex;
+    font-family: "Raleway", "Sans serif";
+  }
 
-.searchbutton:hover /* Faire en sorte que le bouton recherche grossise lorsque l'on passe la souris au-dessus */
-{
-	transform: scale(1.015);
-	background-color: #0065FF;
-}
+  .filtrestext /*Texte des filtres*/ {
+    text-align: center;
+    padding-left: 0em;
+    margin-left: 0em;
+    font-family: "Raleway", "Sans serif";
+  }
 
-.filtres /*Partie des filtres*/
-{
-	display: flex;
-	font-family: "Raleway", "Sans serif";
-}
+  .filtresbuttons /*Contour des boutons des filtres*/ {
+    background-color: white;
+    border: solid #f2f2f2;
+    margin-right: 1.2em;
+    margin-left: 1em;
+    margin-top: 0.6em;
+    border-radius: 1.5em 1.5em 1.5em 1.5em;
+    height: 2.5em;
+    font-weight: bold;
+    font-size: 1em;
+    padding-right: 1.9em;
+    padding-bottom: 2.2em;
+    font-family: "Raleway", "Sans serif";
+  }
 
-.filtrestext /*Texte des filtres*/
-{
-	text-align: center;
-	padding-left: 0em;
-	margin-left: 0em;
-	font-family: "Raleway", "Sans serif";
-}
+  .fa-money-bill-wave, .fa-child, .fa-dog, .fa-heart /*Icones des filtres*/ {
+    border: none;
+    border-radius: 3em;
+    margin-right: 1.2em;
+    margin-left: -0.8em;
+    padding: 0.73em;
+    margin-top: -0.14em;
+    min-width: 1.1em;
+    background-color: #deebff;
+    color: #0065fc;
+  }
 
-.filtresbuttons /*Contour des boutons des filtres*/
-{
-	background-color: white;
-	border: solid #F2F2F2;
-	margin-right: 1.2em;
-	margin-left: 1em;
-	margin-top: 0.6em;
-	border-radius: 1.5em 1.5em 1.5em 1.5em;
-	height: 2.5em;
-	font-weight: bold;
-	font-size: 1em;
-	padding-right: 1.9em;
-	padding-bottom: 2.2em;
-	font-family: "Raleway", "Sans serif";
-}
+  .filtresbuttons:hover /* Faire en sorte que les textes filtres réagissent (passent à la couleur bleu sur fond gris) lorsque l'on passe la souris au-dessus */ {
+    cursor: pointer;
+    background-color: #f2f2f2;
+    color: #0065fc;
+  }
 
-.fa-money-bill-wave, .fa-child, .fa-dog, .fa-heart /*Icones des filtres*/
-{
-	border: none;
-	border-radius: 3em;
-	margin-right: 1.2em;
-	margin-left: -0.8em;
-	padding: 0.73em;
-	margin-top: -0.14em;
-	min-width: 1.1em;
-	background-color: #DEEBFF;
-	color: #0065FC;
-}
+  .filtresbuttons:hover i /* Faire en sorte que les icones filtres réagissent (passent à la couleur noir) lorsque l'on passe la souris au-dessus */ {
+    color: black;
+  }
 
-.filtresbuttons:hover /* Faire en sorte que les textes filtres réagissent (passent à la couleur bleu sur fond gris) lorsque l'on passe la souris au-dessus */
-{
-	cursor: pointer;
-	background-color: #F2F2F2;
-	color: #0065FC;
-}
+  .fa-info /*Bulle info en dessous des filtres*/ {
+    border-radius: 6em;
+    border: solid 0.1em #f2f2f2;
+    padding: 0.3em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    background-color: #fff;
+  }
+  .filtresinfo1 /*Icone Info en dessous des filtres*/ {
+    display: flex;
+    text-align: center;
+    max-height: 1.8em;
+    color: #0065fc;
+  }
 
-.filtresbuttons:hover i /* Faire en sorte que les icones filtres réagissent (passent à la couleur noir) lorsque l'on passe la souris au-dessus */
-{
-	color: black;
-}
+  .filtreinfo1text /*Texte Info en dessous des filtres*/ {
+    margin-top: 0.3em;
+    margin-left: 0.3em;
+    color: black;
+  }
 
-.fa-info /*Bulle info en dessous des filtres*/
-{
-	border-radius: 6em;
-	border: solid 0.1em #F2F2F2;
-	padding: 0.3em;
-	padding-left: 0.6em;
-	padding-right: 0.6em;
-	background-color: #FFF;
-}
-.filtresinfo1 /*Icone Info en dessous des filtres*/ 
-{
-	display: flex;
-	text-align: center;
-	max-height: 1.8em;
-	color: #0065FC;
-}
+  .hebergementstrending /*Partie entière Hebergements à Marseille et Les plus populaires*/ {
+    display: flex;
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
 
-.filtreinfo1text /*Texte Info en dessous des filtres*/
-{
-	margin-top: 0.3em;
-	margin-left: 0.3em;
-	color: black;
-}
+  .htitle /*Titre Hebergements à Marseille*/ {
+    display: flex;
+    margin-left: 1.3em;
+    font-size: large;
+    font-weight: bolder;
+  }
 
-.hebergementstrending /*Partie entière Hebergements à Marseille et Les plus populaires*/
-{
-	display: flex;
-	margin-bottom: 2em;
-	margin-top: 1em;
-}
+  .htitlealt /*Titre les plus populaires*/ {
+    margin-left: 0.3em;
+    display: flex;
+    font-size: large;
+    font-weight: bolder;
+  }
 
-.htitle /*Titre Hebergements à Marseille*/
-{
-	display: flex;
-	margin-left: 1.3em;
-	font-size: large;
-	font-weight: bolder;
-}
+  .fa-chart-line /*Icone dans les plus populaires*/ {
+    text-align-last: end;
+    padding-left: 13.9em;
+  }
 
-.htitlealt /*Titre les plus populaires*/
-{
-	margin-left: 0.3em;
-	display: flex;
-	font-size: large;
-	font-weight: bolder;
+  .hflex /*Faire en sorte que le display soit mis en flex*/ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-}
+  .hebergements /*Partie hebergements à Marseille*/ {
+    background-color: #f2f2f2;
+    border-radius: 1.8em;
+    margin-left: 2.3em;
+    padding: 2em;
+  }
 
-.fa-chart-line /*Icone dans les plus populaires*/
-{
-	text-align-last: end;
-	padding-left: 13.9em;
-}
+  .producth /*Partie entière de l'hebergement dans hebergement*/ {
+    border-bottom: solid #fff 0.9em;
+    background-color: #fff;
+    border-radius: 1.4em;
+    margin: 1.3em;
+    box-shadow: 0px 0px 50px rgb(209, 209, 209);
+    width: 18em;
+  }
 
+  .producthinfo /*Partie infos de l'hebergement dans hebergements*/ {
+    padding-left: 1.3em;
+    font-size: small;
+  }
 
-.hflex /*Faire en sorte que le display soit mis en flex*/
-{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
+  .imagesh /*Image de l'hebergement dans hebergements*/ {
+    object-fit: cover;
+    width: 17.4em;
+    height: 8em;
+    border-top-right-radius: 1.4em;
+    border-top-left-radius: 1.4em;
+    border: solid #fff 0.3em;
+  }
 
-.hebergements /*Partie hebergements à Marseille*/
-{
-	background-color: #F2F2F2;
-	border-radius: 1.8em;
-	margin-left: 2.3em;
-	padding: 2em;
-}
+  .imagesdesc /*Nom de  l'hebergement dans hebergements*/ {
+    display: grid;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-family: "Raleway", "Sans serif";
+    font-weight: bold;
+    font-size: medium;
+  }
 
-.producth /*Partie entière de l'hebergement dans hebergement*/
-{
-	border-bottom: solid #FFF 0.9em;
-	background-color: #FFF;
-	border-radius: 1.4em;
-	margin: 1.3em;
-	box-shadow: 0px 0px 50px rgb(209, 209, 209);
-	width: 18em;
-}
+  .imagesdescsub /*Prix de l'hebergement dans hebergements */ {
+    padding-top: 0.3em;
+    padding-bottom: 0.2em;
+    font-family: "Raleway", "Sans serif";
+    font-size: medium;
+  }
 
-.producthinfo /*Partie infos de l'hebergement dans hebergements*/
-{
-	padding-left: 1.3em;
-	font-size: small;
-}
+  .producthalt /*Partie entière de l'hebergement dans les plus populaires*/ {
+    display: flex;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    max-width: fit-content;
+  }
 
-.imagesh /*Image de l'hebergement dans hebergements*/
-{
-	object-fit: cover;
-	width: 17.4em;
-	height: 8em;
-	border-top-right-radius: 1.4em;
-	border-top-left-radius: 1.4em;
-	border:  solid #FFF 0.3em;
-}
+  .producthinfoalt /*Partie infos de l'hebergement dans les plus populaires*/ {
+    padding-left: 0.5em;
+    font-size: bold;
+    background-color: #fff;
+    width: 16em;
+    max-height: 10.6em;
+    border-bottom-right-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+  }
 
-.imagesdesc /*Nom de  l'hebergement dans hebergements*/
-{
-	display: grid;
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	font-family: "Raleway", "Sans serif";
-	font-weight: bold;
-	font-size: medium;
-}
+  .imageshalt /*Image de l'hebergement dans les plus populaires*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-bottom-left-radius: 1.4em;
+    width: 10em;
+    height: 10em;
+    border: solid #fff 0.3em;
+    border-right: solid #fff 1em;
+  }
 
-.imagesdescsub /*Prix de l'hebergement dans hebergements */
-{
-	padding-top: 0.3em;
-	padding-bottom: 0.2em;
-	font-family: "Raleway", "Sans serif";
-	font-size: medium;
-}
+  .imagesdescalt /*Nom de  l'hebergement dans les plus populaires*/ {
+    display: flex;
+    padding-top: 0.9em;
+    padding-right: 0.5em;
+    font-family: "Raleway", "Sans serif";
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    width: 80%;
+    max-height: fit-content;
+  }
 
-.producthalt /*Partie entière de l'hebergement dans les plus populaires*/
-{
-	display: flex;
-	margin-bottom: 2em;
-	margin-top: 2em;
-	max-width: fit-content;
-}
+  .imagesdescsubalt /*Prix de l'hebergement dans les plus populaires*/ {
+    padding-top: 0.5em;
+    padding-bottom: 3em;
+    font-family: "Raleway", "Sans serif";
+    max-height: 1em;
+  }
 
-.producthinfoalt /*Partie infos de l'hebergement dans les plus populaires*/
-{
-	padding-left: 0.5em;
-	font-size: bold;
-	background-color: #FFF;
-	width: 16em;
-	max-height: 10.6em;
-	border-bottom-right-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-}
+  .staron /*Etoile bleue (Activée)*/ {
+    color: #0065fc;
+    margin-left: auto;
+  }
 
-.imageshalt /*Image de l'hebergement dans les plus populaires*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-bottom-left-radius: 1.4em;
-	width: 10em;
-	height: 10em;
-	border:  solid #FFF 0.3em;
-	border-right: solid #FFF 1em;
-}
+  .staroff /*Etoile grise (Non activée)*/ {
+    background-color: #fff;
+    color: #f2f2f2;
+    margin-left: -0.2em;
+  }
 
-.imagesdescalt /*Nom de  l'hebergement dans les plus populaires*/
-{
-	display: flex;
-	padding-top: 0.9em;
-	padding-right: 0.5em;
-	font-family: "Raleway", "Sans serif";
-	font-size: 1.0em;
-	font-weight: bold;
-	text-align: left;
-	width: 80%;
-	max-height: fit-content;
-}
+  .seemore /*Partie Afficher plus*/ {
+    display: grid;
+    font-weight: bold;
+    width: 20em;
+    margin: 1.3em;
+    max-width: fit-content;
+    font-size: large;
+  }
 
-.imagesdescsubalt /*Prix de l'hebergement dans les plus populaires*/
-{
-	padding-top: 0.5em;
-	padding-bottom: 3em;
-	font-family: "Raleway", "Sans serif";
-	max-height: 1em;
-}
+  .seemore:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/ {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
-.staron /*Etoile bleue (Activée)*/
-{
-	color: #0065FC;
-	margin-left: auto;
-}
+  .espace /*Espace entre Hébergements et les plus populaires*/ {
+    margin: 1em;
+  }
 
-.staroff /*Etoile grise (Non activée)*/
-{
-	background-color: #FFF;
-	color: #F2F2F2;
-	margin-left: -0.2em;
-}
+  .backfamous {
+    text-decoration: none;
+    background-color: #f2f2f2;
+    border-radius: 1.6em;
+    margin-right: 2.3em;
+  }
 
-.seemore /*Partie Afficher plus*/
-{
-	display: grid;
-	font-weight: bold;
-	width: 20em;
-	margin: 1.3em;
-	max-width: fit-content;
-	font-size: large;
-}
+  .populaires /*Partie les plus populaires*/ {
+    background-color: #f2f2f2;
+    border-radius: 1.6em;
+    width: 80%;
+    padding: 2em;
+    height: 92.5%;
+    height: fit-content;
+    padding-top: auto;
+    padding-bottom: auto;
+  }
 
-.seemore:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/
-{
-	text-decoration: underline;
-	cursor: pointer;
-}
+  .activitys /*Partie activité*/ {
+    display: flex;
+    margin-bottom: 2em;
+    margin-top: -3em;
+  }
 
-.espace /*Espace entre Hébergements et les plus populaires*/
-{
-	margin: 1em;
-}
+  .activity /*Centrage partie activité*/ {
+    border-radius: 1.8em;
+    width: 100%;
+    padding: 2em;
+  }
 
-.backfamous
-{
-	text-decoration: none;
-	background-color: #F2F2F2;
-	border-radius: 1.6em;
-	margin-right: 2.3em;
-}
+  .acollumn1 /*Colonne 1*/ {
+    max-width: 25%;
+    max-height: 40em;
+  }
+  .acollumn2 /*Colonne 2*/ {
+    max-width: 25%;
+    max-height: 40em;
+  }
+  .acollumn3 /*Colonne 3*/ {
+    max-width: 25%;
+    max-height: 40em;
+  }
+  .acollumn4 /*Colonne 4*/ {
+    max-width: 25%;
+    max-height: 40em;
+  }
 
-.populaires /*Partie les plus populaires*/
-{
-	background-color: #F2F2F2;
-	border-radius: 1.6em;
-	width: 80%;
-	padding: 2em;
-	height: 92.5%;
-	height: fit-content;
-	padding-top: auto;
-	padding-bottom: auto;
-}
+  .producta /*Produit de la partie activités*/ {
+    border-bottom: solid #fff 0.9em;
+    background-color: #fff;
+    border-radius: 1.4em;
+    margin: 1.3em;
+    box-shadow: 0px 0px 50px rgb(209, 209, 209);
+    width: 90%;
+  }
 
-.activitys /*Partie activité*/
-{
-	display: flex;
-	margin-bottom: 2em;
-	margin-top: -3em;
-}
+  .productainfo /*Bloc de la description de la partie activités*/ {
+    padding-left: 1.3em;
+    padding-bottom: 0.7em;
+    padding-top: 1.2em;
+  }
 
-.activity /*Centrage partie activité*/
-{
-	border-radius: 1.8em;
-	width: 100%;
-	padding: 2em;
-}
+  .imagesdesca /*Description de l'image dans la partie activités*/ {
+    font-family: "Raleway", "Sans serif";
+    font-weight: bold;
+    font-size: large;
+  }
 
-.acollumn1 /*Colonne 1*/
-{
-	max-width: 25%;
-	max-height: 40em;
-}
-.acollumn2 /*Colonne 2*/
-{
-	max-width: 25%;
-	max-height: 40em;
-}
-.acollumn3 /*Colonne 3*/
-{
-	max-width: 25%;
-	max-height: 40em;
-}
-.acollumn4 /*Colonne 4*/
-{
-	max-width: 25%;
-	max-height: 40em;
-}
+  .imagesa1 /*Image 1*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 31.7em;
+    width: 100%;
+  }
 
-.producta /*Produit de la partie activités*/
-{
-	border-bottom: solid #FFF 0.9em;
-	background-color: #FFF;
-	border-radius: 1.4em;
-	margin: 1.3em;
-	box-shadow: 0px 0px 50px rgb(209, 209, 209);
-	width: 90%;
-}
+  .imagesa21 /*Image 2*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 15em;
+    width: 100%;
+  }
 
-.productainfo /*Bloc de la description de la partie activités*/
-{
-	padding-left: 1.3em;
-	padding-bottom: 0.7em;
-	padding-top: 1.2em;
-}
+  .imagesa22 /*Image 3*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 11em;
+    width: 100%;
+  }
 
-.imagesdesca /*Description de l'image dans la partie activités*/
-{
-	font-family: "Raleway", "Sans serif";
-	font-weight: bold;
-	font-size: large;
-}
+  .imagesa3 /*Image 4*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 31.7em;
+    width: 100%;
+  }
 
-.imagesa1 /*Image 1*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 31.7em;
-	width: 100%;
-}
+  .imagesa41 /*Image 5*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 11em;
+    width: 100%;
+  }
 
-.imagesa21 /*Image 2*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 15em;
-	width: 100%;
-}
+  .imagesa42 /*Image 6*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 15em;
+    width: 100%;
+  }
 
-.imagesa22 /*Image 3*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 11em;
-	width: 100%;
-}
+  /*Section Footer*/
+  footer /*Partie globale du footer*/ {
+    background-color: #f2f2f2;
+  }
 
-.imagesa3 /*Image 4*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 31.7em;
-	width: 100%;
-}
+  .foot /*Partie centrée du footer*/ {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.imagesa41 /*Image 5*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 11em;
-	width: 100%;
-}
+  .about /*Partie à propos*/ {
+    width: 33%;
+  }
 
-.imagesa42 /*Image 6*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 15em;
-	width: 100%;
-}
+  .noshebergements /*Partie Nos Hebergements*/ {
+    width: 33%;
+  }
 
-/*Section Footer*/
-footer /*Partie globale du footer*/
-{
-	background-color: #F2F2F2;
-}
+  .help /*Partie Aide*/ {
+    width: 34%;
+  }
 
-.foot /*Partie centrée du footer*/
-{
-	display: flex;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
+  .clickeable:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/ {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 
-.about /*Partie à propos*/
-{
-	width: 33%;
-}
-
-.noshebergements /*Partie Nos Hebergements*/
-{
-	width: 33%;
-}
-
-.help /*Partie Aide*/
-{
-	width: 34%;
-}
-
-.clickeable:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/
-{
-	cursor: pointer;
-	text-decoration: underline;
-}
-
-.clickeable /*Faire en sorte que le texte ne prenne pas toute la place dans sa colonne*/
-{
-	max-width: fit-content;
-	text-decoration: none;
-	color: black;
-	display: flex;
-	padding-bottom: 1em;
-}
+  .clickeable /*Faire en sorte que le texte ne prenne pas toute la place dans sa colonne*/ {
+    max-width: fit-content;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    padding-bottom: 1em;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .central /*Faire en sorte que le page ne prenne que 90% de la place disponible*/ {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo /*Logo*/ {
+    width: 20%;
+    height: 70px;
+    padding: 0em;
+    padding-left: 0px;
+    display: none;
+  }
 
-.central /*Faire en sorte que le page ne prenne que 90% de la place disponible*/
-{
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
-.logo /*Logo*/
-{
-	width: 20%;
-	height: 70px;
-	padding: 0em;
-	padding-left: 0px;
-	display: none;
-}
-
-.topphone
-{
-	display: flex;
-	margin-bottom: 1em;
-	margin-top: 1em;
-}
-
-.ins 
-{
-	margin-top: 30px;
-	text-align: right;
-	margin-right: 1em;
-	width: 50%;
-}
-.logophone
-{
-	padding-left: 2em;
-	padding-top: 1em;
-	width: 50%;
-}
-
-.droite /*Boutons en haut*/
-{
-	display: flex;
-	/*justify-content: center;*/
-}
-
-nav.droite a /*Regroupement des boutons en haut*/
-{
-	padding: 2em;
-	color: #444;
-	text-decoration: none; /* on enleve le soulignage*/
-	border-bottom: solid 0.2em #F2F2F2;
-	width: 50%;
-	text-align: center;
-}
-
-.test
-{
+  .topphone {
     display: flex;
-	flex-direction: column-reverse;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
+  .ins {
+    margin-top: 30px;
+    text-align: right;
+    margin-right: 1em;
+    width: 50%;
+  }
+  .logophone {
+    padding-left: 2em;
+    padding-top: 1em;
+    width: 50%;
+  }
+
+  .droite /*Boutons en haut*/ {
+    display: flex;
+    /*justify-content: center;*/
+  }
+
+  nav.droite a /*Regroupement des boutons en haut*/ {
+    padding: 2em;
+    color: #444;
+    text-decoration: none; /* on enleve le soulignage*/
+    border-bottom: solid 0.2em #f2f2f2;
+    width: 50%;
+    text-align: center;
+  }
+
+  .test {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  nav.droite a:hover {
+    color: #0065fc;
+    background-color: #eee;
+    border-bottom: solid 0.2em #0065fc;
+    transform: scale(1.015);
+  }
+
+  .inscriptionphone /*Bouton s'inscrire*/ {
+    color: #0065fc !important;
+    font-weight: bold;
+    margin-top: 1em;
+    text-decoration: none;
+  }
+
+  a.inscription {
+    display: none !important;
+  }
+
+  ul {
+    padding: 0em;
+    margin: 0em;
+    display: none;
+  }
+
+  a.active /*Partie active en haut*/ {
+    border-bottom: solid 0.2em #0065fc !important;
+    color: #0065fc !important;
+  }
+  .titre /*Titre*/ {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  .soustitre /*Texte en dessous du titre*/ {
+    margin-top: 0px;
+    margin-bottom: 2em;
+  }
+
+  .searchzone /*Partie entière de recherche*/ {
+    display: flex;
+  }
+  .fa-map-marker-alt /*Icone de recherche*/ {
+    padding: 1.1em;
+    background-color: #f2f2f2;
+    border-radius: 1.2em 0em 0em 1.2em;
+    width: 1em;
+    max-height: 3.15em;
+    text-align: center;
+  }
+  .searchbar /*Barre de recherche*/ {
+    border-right: none;
+    border-left: none;
+    border-top: #f2f2f2 1px solid;
+    border-bottom: #f2f2f2 1px solid;
+    padding: 1.5em;
+    width: 14em;
+    height: 3em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+  }
+
+  .searchbutton /*Bouton de recherche*/ {
+    display: none;
+  }
+
+  .searchbuttonicon {
+    border: none;
+    border-radius: 1.2em;
+    background-color: #0065fc;
+    cursor: pointer;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    max-height: 3.15em;
+    font-family: "Raleway", "Sans serif";
+    text-align: center;
+  }
+
+  .searchbuttonicon:hover /* Faire en sorte que le bouton recherche grossise lorsque l'on passe la souris au-dessus */ {
+    transform: scale(1.015);
+    background-color: #0065ff;
+  }
+
+  .filtres /*Partie des filtres*/ {
+    font-family: "Raleway", "Sans serif";
+  }
+
+  .filtrestext /*Texte des filtres*/ {
+    padding-left: 0em;
+    margin-left: 0em;
+    font-family: "Raleway", "Sans serif";
+    max-width: fit-content;
+  }
+
+  .filtresbuttons /*Contour des boutons des filtres*/ {
+    background-color: white;
+    border: solid #f2f2f2;
+    margin-right: 0.5em;
+    border-radius: 1.5em 1.5em 1.5em 1.5em;
+    height: 2.5em;
+    font-weight: bold;
+    font-size: 1em;
+    padding-right: 1em;
+    font-family: "Raleway", "Sans serif";
+    margin-bottom: 1em;
+  }
+
+  .fa-money-bill-wave, .fa-child, .fa-dog, .fa-heart /*Icones des filtres*/ {
+    border: none;
+    border-radius: 3em;
+    margin-right: 1.2em;
+    margin-left: -0.8em;
+    padding: 0.73em;
+    margin-top: -0.14em;
+    min-width: 1.1em;
+    background-color: #deebff;
+    color: #0065fc;
+  }
+
+  .filtresbuttons:hover /* Faire en sorte que les textes filtres réagissent (passent à la couleur bleu sur fond gris) lorsque l'on passe la souris au-dessus */ {
+    cursor: pointer;
+    background-color: #f2f2f2;
+    color: #0065fc;
+  }
+
+  .filtresbuttons:hover i /* Faire en sorte que les icones filtres réagissent (passent à la couleur noir) lorsque l'on passe la souris au-dessus */ {
+    color: black;
+  }
+
+  .fa-info /*Bulle info en dessous des filtres*/ {
+    border-radius: 6em;
+    border: solid 0.1em #f2f2f2;
+    padding: 0.3em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    background-color: #fff;
+  }
+  .filtresinfo1 /*Icone Info en dessous des filtres*/ {
+    display: flex;
+    text-align: center;
+    max-height: 1.8em;
+    color: #0065fc;
+  }
+
+  .filtreinfo1text /*Texte Info en dessous des filtres*/ {
+    margin-top: 0.3em;
+    margin-left: 0.3em;
+    color: black;
+  }
+
+  .hebergementstrending /*Partie entière Hebergements à Marseille et Les plus populaires*/ {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+
+  .htitle /*Titre Hebergements à Marseille*/ {
+    display: flex;
+    margin-left: 1.3em;
+    font-size: large;
+    font-weight: bolder;
+  }
+
+  .htitlealt /*Titre les plus populaires*/ {
+    margin-left: 0.3em;
+    display: flex;
+    font-size: large;
+    font-weight: bolder;
+  }
+
+  .fa-chart-line /*Icone dans les plus populaires*/ {
+    text-align-last: end;
+    padding-left: 7em;
+  }
+
+  .hflex /*Faire en sorte que le display soit mis en flex*/ {
+  }
+
+  .hebergements /*Partie hebergements à Marseille*/ {
+    border-radius: 1.8em;
+    width: 76%;
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .producth /*Partie entière de l'hebergement dans hebergement*/ {
+    border-bottom: solid #fff 0.9em;
+    background-color: #fff;
+    border-radius: 1.4em;
+    margin: 1.3em;
+    box-shadow: 0px 0px 50px rgb(209, 209, 209);
+    width: 90%;
+  }
+
+  .producthinfo /*Partie infos de l'hebergement dans hebergements*/ {
+    padding-left: 1.3em;
+    font-size: small;
+  }
+
+  .imagesh /*Image de l'hebergement dans hebergements*/ {
+    object-fit: cover;
+    width: 97%;
+    height: 8em;
+    border-top-right-radius: 1.4em;
+    border-top-left-radius: 1.4em;
+    border: solid #fff 0.3em;
+  }
+
+  .imagesdesc /*Nom de  l'hebergement dans hebergements*/ {
+    display: grid;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-family: "Raleway", "Sans serif";
+    font-weight: bold;
+    font-size: medium;
+    width: 110%;
+  }
+
+  .imagesdescsub /*Prix de l'hebergement dans hebergements */ {
+    padding-top: 0.3em;
+    padding-bottom: 0.2em;
+    font-family: "Raleway", "Sans serif";
+    font-size: medium;
+  }
+
+  .producthalt /*Partie entière de l'hebergement dans les plus populaires*/ {
+    display: flex;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    max-width: fit-content;
+  }
+
+  .producthinfoalt /*Partie infos de l'hebergement dans les plus populaires*/ {
+    padding-left: 0.5em;
+    font-size: bold;
+    background-color: #fff;
+    width: 16em;
+    border-bottom-right-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+  }
+
+  .imageshalt /*Image de l'hebergement dans les plus populaires*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-bottom-left-radius: 1.4em;
+    width: 10em;
+    height: 10em;
+    border: solid #fff 0.3em;
+    border-right: solid #fff 1em;
+  }
+
+  .imagesdescalt /*Nom de  l'hebergement dans les plus populaires*/ {
+    display: flex;
+    padding-top: 0.9em;
+    padding-right: 0.5em;
+    font-family: "Raleway", "Sans serif";
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    width: 80%;
+  }
+
+  .imagesdescsubalt /*Prix de l'hebergement dans les plus populaires*/ {
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+    font-family: "Raleway", "Sans serif";
+  }
+
+  .staron /*Etoile bleue (Activée)*/ {
+    color: #0065fc;
+    margin-left: auto;
+  }
+
+  .staroff /*Etoile grise (Non activée)*/ {
+    background-color: #fff;
+    color: #f2f2f2;
+    margin-left: -0.2em;
+  }
+
+  .seemore /*Partie Afficher plus*/ {
+    display: grid;
+    font-weight: bold;
+    width: 20em;
+    margin: 1.3em;
+    max-width: fit-content;
+    font-size: large;
+  }
+
+  .seemore:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/ {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .backfamous {
+    background-color: #f2f2f2;
+  }
+
+  .populaires /*Partie les plus populaires*/ {
+    background-color: #f2f2f2;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .imagesa1 /*Image 1*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 8em;
+    width: 100%;
+  }
+
+  .imagesa21 /*Image 2*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 8em;
+    width: 100%;
+  }
+
+  .imagesa22 /*Image 3*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 8em;
+    width: 100%;
+  }
+
+  .imagesa3 /*Image 4*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 8em;
+    width: 100%;
+  }
+
+  .imagesa41 /*Image 5*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 8em;
+    width: 100%;
+  }
+
+  .imagesa42 /*Image 6*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 8em;
+    width: 100%;
+  }
+
+  .producta /*Produit de la partie activités*/ {
+    border-bottom: solid #fff 0.9em;
+    background-color: #fff;
+    border-radius: 1.4em;
+    margin: 1.3em;
+    box-shadow: 0px 0px 50px rgb(209, 209, 209);
+    width: 90%;
+    font-family: "Raleway", "Sans serif";
+    justify-content: center;
+  }
+
+  .imagesdesca /*Description de l'image dans la partie activités*/ {
+    font-family: "Raleway", "Sans serif";
+    font-weight: bold;
+    font-size: medium;
+    padding-left: 1em;
+    padding-top: 0.5em;
+  }
+
+  /*Section Footer*/
+  footer /*Partie globale du footer*/ {
+    background-color: #f2f2f2;
+  }
+
+  .foot /*Partie centrée du footer*/ {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .clickeable:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/ {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .clickeable /*Faire en sorte que le texte ne prenne pas toute la place dans sa colonne*/ {
+    max-width: fit-content;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    padding-bottom: 1em;
+  }
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .central /*Faire en sorte que le page ne prenne que 90% de la place disponible*/ {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo /*Logo*/ {
+    display: none;
+  }
 
-nav.droite a:hover 
-{
-	color: #0065FC;
-	background-color: #eee;
-	border-bottom: solid 0.2em #0065FC;
-	transform: scale(1.015)
+  .topphone {
+    display: flex;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
+  .ins {
+    margin-top: 10px;
+    text-align: right;
+    margin-right: 30px;
+    width: 50%;
+  }
+  .logophone {
+    margin-left: 2em;
+    margin-top: 1em;
+    width: 50%;
+  }
+
+  .droite /*Boutons en haut*/ {
+    display: flex;
+    /*justify-content: center;*/
+  }
+
+  nav.droite a /*Regroupement des boutons en haut*/ {
+    padding: 30px;
+    color: #444;
+    text-decoration: none; /* on enleve le soulignage*/
+    border-bottom: solid 0.2em #f2f2f2;
+    width: 50%;
+    text-align: center;
+  }
+
+  nav.droite a:hover {
+    color: #0065fc;
+    background-color: #eee;
+    border-bottom: solid 0.2em #0065fc;
+    transform: scale(1.015);
+  }
+
+  .inscriptionphone /*Bouton s'inscrire*/ {
+    color: #0065fc !important;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a.inscription {
+    display: none !important;
+  }
+
+  ul {
+    padding: 0em;
+    margin: 0em;
+    display: none;
+  }
+
+  a.active /*Partie active en haut*/ {
+    border-bottom: solid 0.2em #0065fc !important;
+    color: #0065fc !important;
+  }
+  .titre /*Titre*/ {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  .soustitre /*Texte en dessous du titre*/ {
+    margin-top: 0px;
+    margin-bottom: 2em;
+  }
+
+  .searchzone /*Partie entière de recherche*/ {
+    display: flex;
+  }
+  .fa-map-marker-alt /*Icone de recherche*/ {
+    padding: 1.1em;
+    background-color: #f2f2f2;
+    border-radius: 1.2em 0em 0em 1.2em;
+    width: 1em;
+    max-height: 3.15em;
+    text-align: center;
+  }
+  .searchbar /*Barre de recherche*/ {
+    border-right: none;
+    border-left: none;
+    border-top: #f2f2f2 1px solid;
+    border-bottom: #f2f2f2 1px solid;
+    padding: 1.5em;
+    width: 14em;
+    height: 3em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+  }
+
+  .searchbutton /*Bouton de recherche*/ {
+    display: none;
+  }
+
+  .searchbuttonicon {
+    border: none;
+    border-radius: 1.2em;
+    background-color: #0065fc;
+    cursor: pointer;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    max-height: 3.15em;
+    font-family: "Raleway", "Sans serif";
+    text-align: center;
+  }
+
+  .searchbuttonicon:hover /* Faire en sorte que le bouton recherche grossise lorsque l'on passe la souris au-dessus */ {
+    transform: scale(1.015);
+    background-color: #0065ff;
+  }
+
+  .filtres /*Partie des filtres*/ {
+    font-family: "Raleway", "Sans serif";
+  }
+
+  .filtrestext /*Texte des filtres*/ {
+    padding-left: 0em;
+    margin-left: 0em;
+    font-family: "Raleway", "Sans serif";
+    max-width: fit-content;
+  }
+
+  .filtresbuttons /*Contour des boutons des filtres*/ {
+    background-color: white;
+    border: solid #f2f2f2;
+    margin-right: 0.5em;
+    border-radius: 1.5em 1.5em 1.5em 1.5em;
+    height: 2.5em;
+    font-weight: bold;
+    font-size: 1em;
+    padding-right: 1em;
+    font-family: "Raleway", "Sans serif";
+    margin-bottom: 1em;
+  }
+
+  .fa-money-bill-wave, .fa-child, .fa-dog, .fa-heart /*Icones des filtres*/ {
+    border: none;
+    border-radius: 3em;
+    margin-right: 1.2em;
+    margin-left: -0.8em;
+    padding: 0.73em;
+    margin-top: -0.14em;
+    min-width: 1.1em;
+    background-color: #deebff;
+    color: #0065fc;
+  }
+
+  .filtresbuttons:hover /* Faire en sorte que les textes filtres réagissent (passent à la couleur bleu sur fond gris) lorsque l'on passe la souris au-dessus */ {
+    cursor: pointer;
+    background-color: #f2f2f2;
+    color: #0065fc;
+  }
+
+  .filtresbuttons:hover i /* Faire en sorte que les icones filtres réagissent (passent à la couleur noir) lorsque l'on passe la souris au-dessus */ {
+    color: black;
+  }
+
+  .fa-info /*Bulle info en dessous des filtres*/ {
+    border-radius: 6em;
+    border: solid 0.1em #f2f2f2;
+    padding: 0.3em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    background-color: #fff;
+  }
+  .filtresinfo1 /*Icone Info en dessous des filtres*/ {
+    display: flex;
+    text-align: center;
+    max-height: 1.8em;
+    color: #0065fc;
+  }
+
+  .filtreinfo1text /*Texte Info en dessous des filtres*/ {
+    margin-top: 0.3em;
+    margin-left: 0.3em;
+    color: black;
+  }
+
+  .hebergementstrending /*Partie entière Hebergements à Marseille et Les plus populaires*/ {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+
+  .htitle /*Titre Hebergements à Marseille*/ {
+    display: flex;
+    margin-left: 1.3em;
+    font-size: large;
+    font-weight: bolder;
+  }
+
+  .htitlealt /*Titre les plus populaires*/ {
+    margin-left: 0.3em;
+    display: flex;
+    font-size: large;
+    font-weight: bolder;
+  }
+
+  .fa-chart-line /*Icone dans les plus populaires*/ {
+    text-align-last: end;
+    padding-left: 7em;
+  }
+
+  .hflex /*Faire en sorte que le display soit mis en flex*/ {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .hebergements /*Partie hebergements à Marseille*/ {
+    border-radius: 1.8em;
+    width: 76%;
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .producth /*Partie entière de l'hebergement dans hebergement*/ {
+    border-bottom: solid #fff 0.9em;
+    background-color: #fff;
+    border-radius: 1.4em;
+    margin: 1.3em;
+    box-shadow: 0px 0px 50px rgb(209, 209, 209);
+    width: 40%;
+  }
+
+  .producthinfo /*Partie infos de l'hebergement dans hebergements*/ {
+    padding-left: 1.3em;
+    font-size: small;
+  }
+
+  .imagesh /*Image de l'hebergement dans hebergements*/ {
+    object-fit: cover;
+    width: 97%;
+    height: 8em;
+    border-top-right-radius: 1.4em;
+    border-top-left-radius: 1.4em;
+    border: solid #fff 0.3em;
+  }
+
+  .imagesdesc /*Nom de  l'hebergement dans hebergements*/ {
+    display: grid;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-family: "Raleway", "Sans serif";
+    font-weight: bold;
+    font-size: medium;
+    width: 110%;
+  }
+
+  .imagesdescsub /*Prix de l'hebergement dans hebergements */ {
+    padding-top: 0.3em;
+    padding-bottom: 0.2em;
+    font-family: "Raleway", "Sans serif";
+    font-size: medium;
+  }
+
+  .fproducts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .producthalt /*Partie entière de l'hebergement dans les plus populaires*/ {
+    display: flex;
+    margin: 0.5em;
+    max-width: fit-content;
+  }
+
+  .producthinfoalt /*Partie infos de l'hebergement dans les plus populaires*/ {
+    padding-left: 0.5em;
+    font-size: bold;
+    background-color: #fff;
+    width: 16em;
+    border-bottom-right-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+  }
+
+  .imageshalt /*Image de l'hebergement dans les plus populaires*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-bottom-left-radius: 1.4em;
+    width: 10em;
+    height: 10em;
+    border: solid #fff 0.3em;
+    border-right: solid #fff 1em;
+  }
+
+  .imagesdescalt /*Nom de  l'hebergement dans les plus populaires*/ {
+    display: flex;
+    padding-top: 0.9em;
+    padding-right: 0.5em;
+    font-family: "Raleway", "Sans serif";
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    width: 80%;
+  }
+
+  .imagesdescsubalt /*Prix de l'hebergement dans les plus populaires*/ {
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+    font-family: "Raleway", "Sans serif";
+  }
+
+  .staron /*Etoile bleue (Activée)*/ {
+    color: #0065fc;
+    margin-left: auto;
+  }
+
+  .staroff /*Etoile grise (Non activée)*/ {
+    background-color: #fff;
+    color: #f2f2f2;
+    margin-left: -0.2em;
+  }
+
+  .seemore /*Partie Afficher plus*/ {
+    display: grid;
+    font-weight: bold;
+    width: 20em;
+    margin: 1.3em;
+    max-width: fit-content;
+    font-size: large;
+  }
+
+  .seemore:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/ {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .backfamous {
+    background-color: #f2f2f2;
+  }
+
+  .activity {
+    width: 95%;
+    margin: 0em;
+    justify-content: center;
+  }
+
+  .populaires /*Partie les plus populaires*/ {
+    background-color: #f2f2f2;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .acollumn1 /*Colonne 1*/ {
+    max-width: 25%;
+    max-height: 40em;
+  }
+  .acollumn2 /*Colonne 2*/ {
+    max-width: 25%;
+    max-height: 40em;
+  }
+  .acollumn3 /*Colonne 3*/ {
+    max-width: 25%;
+    max-height: 40em;
+  }
+  .acollumn4 /*Colonne 4*/ {
+    max-width: 25%;
+    max-height: 40em;
+  }
+
+  .imagesa1 /*Image 1*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 33em;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imagesa21 /*Image 2*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 16em;
+    width: 100%;
+  }
+
+  .imagesa22 /*Image 3*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 12.8em;
+    width: 100%;
+  }
+
+  .imagesa3 /*Image 4*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 31.7em;
+    width: 100%;
+  }
+
+  .imagesa41 /*Image 5*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 12.8em;
+    width: 100%;
+  }
+
+  .imagesa42 /*Image 6*/ {
+    object-fit: cover;
+    border-top-left-radius: 1.4em;
+    border-top-right-radius: 1.4em;
+    height: 16em;
+    width: 100%;
+  }
+
+  .producta /*Produit de la partie activités*/ {
+    border-bottom: solid #fff 0.9em;
+    background-color: #fff;
+    border-radius: 1.4em;
+    margin: 1.3em;
+    box-shadow: 0px 0px 50px rgb(209, 209, 209);
+    width: 90%;
+  }
+
+  .imagesdesca /*Description de l'image dans la partie activités*/ {
+    font-family: "Raleway", "Sans serif";
+    font-weight: bold;
+    font-size: medium;
+    padding-left: 1em;
+    padding-top: 0.5em;
+  }
+
+  /*Section Footer*/
+  footer /*Partie globale du footer*/ {
+    background-color: #f2f2f2;
+  }
+
+  .foot /*Partie centrée du footer*/ {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+  }
+
+  .about /*Partie à propos*/ {
+    width: 33%;
+  }
+
+  .noshebergements /*Partie Nos Hebergements*/ {
+    width: 33%;
+  }
+
+  .help /*Partie Aide*/ {
+    width: 34%;
+  }
+
+  .clickeable:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/ {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .clickeable /*Faire en sorte que le texte ne prenne pas toute la place dans sa colonne*/ {
+    max-width: fit-content;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    padding-bottom: 1em;
+  }
 }
-
-.inscriptionphone /*Bouton s'inscrire*/
-{
-	color: #0065FC !important;
-	font-weight: bold;
-	margin-top: 1em;
-	text-decoration: none;
-}
-
-a.inscription
-{
-	display: none !important;
-}
-
-ul
-{
-	padding: 0em;
-	margin: 0em;
-	display: none;
-}
-
-a.active /*Partie active en haut*/
-{
-	border-bottom: solid 0.2em #0065FC !important; 
-	color: #0065FC !important;
-}
-.titre /*Titre*/
-{
-	margin-bottom: 0.5em;
-	font-weight: bold;
-}
-.soustitre /*Texte en dessous du titre*/
-{
-	margin-top: 0px;
-	margin-bottom: 2em;
-}
-
-.searchzone /*Partie entière de recherche*/
-{
-	display: flex;
-}
-.fa-map-marker-alt /*Icone de recherche*/
-{
-	padding: 1.1em;
-	background-color: #F2F2F2;
-	border-radius: 1.2em 0em 0em 1.2em;
-	width: 1em;
-	max-height: 3.15em;
-	text-align: center;
-}
-.searchbar /*Barre de recherche*/
-{
-	border-right: none;
-	border-left: none;
-	border-top: #F2F2F2 1px solid;
-	border-bottom: #F2F2F2 1px solid;
-	padding: 1.5em;
-	width: 14em;
-	height: 3em;
-	font-size: 1em;
-	font-weight: bold;
-	font-family: "Raleway", "Sans serif";
-}
-
-.searchbutton /*Bouton de recherche*/
-{
-	display: none;
-}
-
-.searchbuttonicon
-{
-	border: none;
-	border-radius: 1.2em;
-	background-color: #0065FC;
-	cursor: pointer;
-	padding: 1em;
-	color: white;
-	font-weight: bold;
-	font-size: 1em;
-	max-height: 3.15em;
-	font-family: "Raleway", "Sans serif";
-	text-align: center;
-}
-
-.searchbuttonicon:hover /* Faire en sorte que le bouton recherche grossise lorsque l'on passe la souris au-dessus */
-{
-	transform: scale(1.015);
-	background-color: #0065FF;
-}
-
-.filtres /*Partie des filtres*/
-{
-	font-family: "Raleway", "Sans serif";
-}
-
-.filtrestext /*Texte des filtres*/
-{
-	padding-left: 0em;
-	margin-left: 0em;
-	font-family: "Raleway", "Sans serif";
-	max-width: fit-content;
-}
-
-.filtresbuttons /*Contour des boutons des filtres*/
-
-{
-	background-color: white;
-	border: solid #F2F2F2;
-	margin-right: 0.5em;
-	border-radius: 1.5em 1.5em 1.5em 1.5em;
-	height: 2.5em;
-	font-weight: bold;
-	font-size: 1em;
-	padding-right: 1em;
-	font-family: "Raleway", "Sans serif";
-	margin-bottom: 1em;
-}
-
-.fa-money-bill-wave, .fa-child, .fa-dog, .fa-heart /*Icones des filtres*/
-{
-	border: none;
-	border-radius: 3em;
-	margin-right: 1.2em;
-	margin-left: -0.8em;
-	padding: 0.73em;
-	margin-top: -0.14em;
-	min-width: 1.1em;
-	background-color: #DEEBFF;
-	color: #0065FC;
-}
-
-.filtresbuttons:hover /* Faire en sorte que les textes filtres réagissent (passent à la couleur bleu sur fond gris) lorsque l'on passe la souris au-dessus */
-{
-	cursor: pointer;
-	background-color: #F2F2F2;
-	color: #0065FC;
-}
-
-.filtresbuttons:hover i /* Faire en sorte que les icones filtres réagissent (passent à la couleur noir) lorsque l'on passe la souris au-dessus */
-{
-	color: black;
-}
-
-.fa-info /*Bulle info en dessous des filtres*/
-{
-	border-radius: 6em;
-	border: solid 0.1em #F2F2F2;
-	padding: 0.3em;
-	padding-left: 0.6em;
-	padding-right: 0.6em;
-	background-color: #FFF;
-}
-.filtresinfo1 /*Icone Info en dessous des filtres*/ 
-{
-	display: flex;
-	text-align: center;
-	max-height: 1.8em;
-	color: #0065FC;
-}
-
-.filtreinfo1text /*Texte Info en dessous des filtres*/
-{
-	margin-top: 0.3em;
-	margin-left: 0.3em;
-	color: black;
-}
-
-.hebergementstrending /*Partie entière Hebergements à Marseille et Les plus populaires*/
-{
-	display: flex;
-	flex-direction: column-reverse;
-	margin-bottom: 2em;
-	margin-top: 1em;
-}
-
-.htitle /*Titre Hebergements à Marseille*/
-{
-	display: flex;
-	margin-left: 1.3em;
-	font-size: large;
-	font-weight: bolder;
-}
-
-.htitlealt /*Titre les plus populaires*/
-{
-	margin-left: 0.3em;
-	display: flex;
-	font-size: large;
-	font-weight: bolder;
-}
-
-.fa-chart-line /*Icone dans les plus populaires*/
-{
-	text-align-last: end;
-	padding-left: 7em;
-}
-
-
-.hflex /*Faire en sorte que le display soit mis en flex*/
-{
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.hebergements /*Partie hebergements à Marseille*/
-{
-	border-radius: 1.8em;
-	width: 76%;
-	padding: 2em;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.producth /*Partie entière de l'hebergement dans hebergement*/
-{
-	border-bottom: solid #FFF 0.9em;
-	background-color: #FFF;
-	border-radius: 1.4em;
-	margin: 1.3em;
-	box-shadow: 0px 0px 50px rgb(209, 209, 209);
-	width: 90%;
-}
-
-.producthinfo /*Partie infos de l'hebergement dans hebergements*/
-{
-	padding-left: 1.3em;
-	font-size: small;
-}
-
-.imagesh /*Image de l'hebergement dans hebergements*/
-{
-	object-fit: cover;
-	width: 97%;
-	height: 8em;
-	border-top-right-radius: 1.4em;
-	border-top-left-radius: 1.4em;
-	border:  solid #FFF 0.3em;
-}
-
-.imagesdesc /*Nom de  l'hebergement dans hebergements*/
-{
-	display: grid;
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	font-family: "Raleway", "Sans serif";
-	font-weight: bold;
-	font-size: medium;
-	width: 110%;
-}
-
-.imagesdescsub /*Prix de l'hebergement dans hebergements */
-{
-	padding-top: 0.3em;
-	padding-bottom: 0.2em;
-	font-family: "Raleway", "Sans serif";
-	font-size: medium;
-}
-
-.producthalt /*Partie entière de l'hebergement dans les plus populaires*/
-{
-	display: flex;
-	margin-bottom: 2em;
-	margin-top: 2em;
-	max-width: fit-content;
-}
-
-.producthinfoalt /*Partie infos de l'hebergement dans les plus populaires*/
-{
-	padding-left: 0.5em;
-	font-size: bold;
-	background-color: #FFF;
-	width: 16em;
-	border-bottom-right-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-}
-
-.imageshalt /*Image de l'hebergement dans les plus populaires*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-bottom-left-radius: 1.4em;
-	width: 10em;
-	height: 10em;
-	border:  solid #FFF 0.3em;
-	border-right: solid #FFF 1em;
-}
-
-.imagesdescalt /*Nom de  l'hebergement dans les plus populaires*/
-{
-	display: flex;
-	padding-top: 0.9em;
-	padding-right: 0.5em;
-	font-family: "Raleway", "Sans serif";
-	font-size: 1em;
-	font-weight: bold;
-	text-align: left;
-	width: 80%;
-}
-
-.imagesdescsubalt /*Prix de l'hebergement dans les plus populaires*/
-{
-	padding-top: 0.5em;
-	padding-bottom: 2em;
-	font-family: "Raleway", "Sans serif";
-}
-
-.staron /*Etoile bleue (Activée)*/
-{
-	color: #0065FC;
-	margin-left: auto;
-}
-
-.staroff /*Etoile grise (Non activée)*/
-{
-	background-color: #FFF;
-	color: #F2F2F2;
-	margin-left: -0.2em;
-}
-
-.seemore /*Partie Afficher plus*/
-{
-	display: grid;
-	font-weight: bold;
-	width: 20em;
-	margin: 1.3em;
-	max-width: fit-content;
-	font-size: large;
-}
-
-.seemore:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/
-{
-	text-decoration: underline;
-	cursor: pointer;
-}
-
-.backfamous
-{
-	background-color: #F2F2F2;
-}
-
-.populaires /*Partie les plus populaires*/
-{
-	background-color: #F2F2F2;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	
-}
-.imagesa1 /*Image 1*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 8em;
-	width: 100%;
-}
-
-.imagesa21 /*Image 2*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 8em;
-	width: 100%;
-}
-
-.imagesa22 /*Image 3*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 8em;
-	width: 100%;
-}
-
-.imagesa3 /*Image 4*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 8em;
-	width: 100%;
-}
-
-.imagesa41 /*Image 5*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 8em;
-	width: 100%;
-}
-
-.imagesa42 /*Image 6*/
-{
-	object-fit: cover;
-	border-top-left-radius: 1.4em;
-	border-top-right-radius: 1.4em;
-	height: 8em;
-	width: 100%;
-}
-
-.producta /*Produit de la partie activités*/
-{
-	border-bottom: solid #FFF 0.9em;
-	background-color: #FFF;
-	border-radius: 1.4em;
-	margin: 1.3em;
-	box-shadow: 0px 0px 50px rgb(209, 209, 209);
-	width: 90%;
-	font-family: "Raleway", "Sans serif";
-}
-
-.imagesdesca /*Description de l'image dans la partie activités*/
-{
-	font-family: "Raleway", "Sans serif";
-	font-weight: bold;
-	font-size: medium;
-	padding-left: 1em;
-	padding-top: 0.5em;
-}
-
-/*Section Footer*/
-footer /*Partie globale du footer*/
-{
-	background-color: #F2F2F2;
-}
-
-.foot /*Partie centrée du footer*/
-{
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 1em;
-	padding-bottom: 1em;
-}
-
-.clickeable:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/
-{
-	cursor: pointer;
-	text-decoration: underline;
-}
-
-.clickeable /*Faire en sorte que le texte ne prenne pas toute la place dans sa colonne*/
-{
-	max-width: fit-content;
-	text-decoration: none;
-	color: black;
-	display: flex;
-	padding-bottom: 1em;
-}
-}
-@media screen and (min-width: 768px) and (max-width:1200px) {
-	
-	.central /*Faire en sorte que le page ne prenne que 90% de la place disponible*/
-	{
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.logo /*Logo*/
-	{
-		display: none;
-	}
-	
-	.topphone
-	{
-		display: flex;
-		margin-bottom: 1em;
-		margin-top: 1em;
-	}
-
-	.ins 
-	{
-		margin-top: 10px;
-		text-align: right;
-		margin-right: 30px;
-		width: 50%;
-	}
-	.logophone
-	{
-		margin-left: 2em;
-		margin-top: 1em;
-		width: 50%;
-	}
-	
-	.droite /*Boutons en haut*/
-	{
-		display: flex;
-		/*justify-content: center;*/
-	}
-	
-	nav.droite a /*Regroupement des boutons en haut*/
-	{
-		padding: 30px;
-		color: #444;
-		text-decoration: none; /* on enleve le soulignage*/
-		border-bottom: solid 0.2em #F2F2F2;
-		width: 50%;
-		text-align: center;
-	}
-	
-	nav.droite a:hover 
-	{
-		color: #0065FC;
-		background-color: #eee;
-		border-bottom: solid 0.2em #0065FC;
-		transform: scale(1.015)
-	}
-	
-	.inscriptionphone /*Bouton s'inscrire*/
-	{
-		color: #0065FC !important;
-		font-weight: bold;
-		text-decoration: none;
-	}
-	
-	a.inscription
-	{
-		display: none !important;
-	}
-	
-	ul
-	{
-		padding: 0em;
-		margin: 0em;
-		display: none;
-	}
-	
-	a.active /*Partie active en haut*/
-	{
-		border-bottom: solid 0.2em #0065FC !important; 
-		color: #0065FC !important;
-	}
-	.titre /*Titre*/
-	{
-		margin-bottom: 0.5em;
-		font-weight: bold;
-	}
-	.soustitre /*Texte en dessous du titre*/
-	{
-		margin-top: 0px;
-		margin-bottom: 2em;
-	}
-	
-	.searchzone /*Partie entière de recherche*/
-	{
-		display: flex;
-	}
-	.fa-map-marker-alt /*Icone de recherche*/
-	{
-		padding: 1.1em;
-		background-color: #F2F2F2;
-		border-radius: 1.2em 0em 0em 1.2em;
-		width: 1em;
-		max-height: 3.15em;
-		text-align: center;
-	}
-	.searchbar /*Barre de recherche*/
-	{
-		border-right: none;
-		border-left: none;
-		border-top: #F2F2F2 1px solid;
-		border-bottom: #F2F2F2 1px solid;
-		padding: 1.5em;
-		width: 14em;
-		height: 3em;
-		font-size: 1em;
-		font-weight: bold;
-		font-family: "Raleway", "Sans serif";
-	}
-	
-	.searchbutton /*Bouton de recherche*/
-	{
-		display: none;
-	}
-	
-	.searchbuttonicon
-	{
-		border: none;
-		border-radius: 1.2em;
-		background-color: #0065FC;
-		cursor: pointer;
-		padding: 1em;
-		color: white;
-		font-weight: bold;
-		font-size: 1em;
-		max-height: 3.15em;
-		font-family: "Raleway", "Sans serif";
-		text-align: center;
-	}
-	
-	.searchbuttonicon:hover /* Faire en sorte que le bouton recherche grossise lorsque l'on passe la souris au-dessus */
-	{
-		transform: scale(1.015);
-		background-color: #0065FF;
-	}
-	
-	.filtres /*Partie des filtres*/
-	{
-		font-family: "Raleway", "Sans serif";
-	}
-	
-	.filtrestext /*Texte des filtres*/
-	{
-		padding-left: 0em;
-		margin-left: 0em;
-		font-family: "Raleway", "Sans serif";
-		max-width: fit-content;
-	}
-	
-	.filtresbuttons /*Contour des boutons des filtres*/
-	
-	{
-		background-color: white;
-		border: solid #F2F2F2;
-		margin-right: 0.5em;
-		border-radius: 1.5em 1.5em 1.5em 1.5em;
-		height: 2.5em;
-		font-weight: bold;
-		font-size: 1em;
-		padding-right: 1em;
-		font-family: "Raleway", "Sans serif";
-		margin-bottom: 1em;
-	}
-	
-	.fa-money-bill-wave, .fa-child, .fa-dog, .fa-heart /*Icones des filtres*/
-	{
-		border: none;
-		border-radius: 3em;
-		margin-right: 1.2em;
-		margin-left: -0.8em;
-		padding: 0.73em;
-		margin-top: -0.14em;
-		min-width: 1.1em;
-		background-color: #DEEBFF;
-		color: #0065FC;
-	}
-	
-	.filtresbuttons:hover /* Faire en sorte que les textes filtres réagissent (passent à la couleur bleu sur fond gris) lorsque l'on passe la souris au-dessus */
-	{
-		cursor: pointer;
-		background-color: #F2F2F2;
-		color: #0065FC;
-	}
-	
-	.filtresbuttons:hover i /* Faire en sorte que les icones filtres réagissent (passent à la couleur noir) lorsque l'on passe la souris au-dessus */
-	{
-		color: black;
-	}
-	
-	.fa-info /*Bulle info en dessous des filtres*/
-	{
-		border-radius: 6em;
-		border: solid 0.1em #F2F2F2;
-		padding: 0.3em;
-		padding-left: 0.6em;
-		padding-right: 0.6em;
-		background-color: #FFF;
-	}
-	.filtresinfo1 /*Icone Info en dessous des filtres*/ 
-	{
-		display: flex;
-		text-align: center;
-		max-height: 1.8em;
-		color: #0065FC;
-	}
-	
-	.filtreinfo1text /*Texte Info en dessous des filtres*/
-	{
-		margin-top: 0.3em;
-		margin-left: 0.3em;
-		color: black;
-	}
-	
-	.hebergementstrending /*Partie entière Hebergements à Marseille et Les plus populaires*/
-	{
-		display: flex;
-		flex-direction: column-reverse;
-		margin-bottom: 2em;
-		margin-top: 1em;
-	}
-	
-	.htitle /*Titre Hebergements à Marseille*/
-	{
-		display: flex;
-		margin-left: 1.3em;
-		font-size: large;
-		font-weight: bolder;
-	}
-	
-	.htitlealt /*Titre les plus populaires*/
-	{
-		margin-left: 0.3em;
-		display: flex;
-		font-size: large;
-		font-weight: bolder;
-	}
-	
-	.fa-chart-line /*Icone dans les plus populaires*/
-	{
-		text-align-last: end;
-		padding-left: 7em;
-	}
-	
-	
-	.hflex /*Faire en sorte que le display soit mis en flex*/
-	{
-		display: flex;
-		flex-wrap: wrap;
-	}
-	
-	.hebergements /*Partie hebergements à Marseille*/
-	{
-		border-radius: 1.8em;
-		width: 76%;
-		padding: 2em;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	
-	.producth /*Partie entière de l'hebergement dans hebergement*/
-	{
-		border-bottom: solid #FFF 0.9em;
-		background-color: #FFF;
-		border-radius: 1.4em;
-		margin: 1.3em;
-		box-shadow: 0px 0px 50px rgb(209, 209, 209);
-		width: 40%;
-	}
-	
-	.producthinfo /*Partie infos de l'hebergement dans hebergements*/
-	{
-		padding-left: 1.3em;
-		font-size: small;
-	}
-	
-	.imagesh /*Image de l'hebergement dans hebergements*/
-	{
-		object-fit: cover;
-		width: 97%;
-		height: 8em;
-		border-top-right-radius: 1.4em;
-		border-top-left-radius: 1.4em;
-		border:  solid #FFF 0.3em;
-	}
-	
-	.imagesdesc /*Nom de  l'hebergement dans hebergements*/
-	{
-		display: grid;
-		padding-top: 0.2em;
-		padding-bottom: 0.2em;
-		font-family: "Raleway", "Sans serif";
-		font-weight: bold;
-		font-size: medium;
-		width: 110%;
-	}
-	
-	.imagesdescsub /*Prix de l'hebergement dans hebergements */
-	{
-		padding-top: 0.3em;
-		padding-bottom: 0.2em;
-		font-family: "Raleway", "Sans serif";
-		font-size: medium;
-	}
-
-	.fproducts
-	{
-		display: flex;
-		flex-wrap: wrap;
-	}
-	
-	.producthalt /*Partie entière de l'hebergement dans les plus populaires*/
-	{
-		display: flex;
-		margin: 0.5em;
-		max-width: fit-content;
-	}
-	
-	.producthinfoalt /*Partie infos de l'hebergement dans les plus populaires*/
-	{
-		padding-left: 0.5em;
-		font-size: bold;
-		background-color: #FFF;
-		width: 16em;
-		border-bottom-right-radius: 1.4em;
-		border-top-right-radius: 1.4em;
-	}
-	
-	.imageshalt /*Image de l'hebergement dans les plus populaires*/
-	{
-		object-fit: cover;
-		border-top-left-radius: 1.4em;
-		border-bottom-left-radius: 1.4em;
-		width: 10em;
-		height: 10em;
-		border:  solid #FFF 0.3em;
-		border-right: solid #FFF 1em;
-	}
-	
-	.imagesdescalt /*Nom de  l'hebergement dans les plus populaires*/
-	{
-		display: flex;
-		padding-top: 0.9em;
-		padding-right: 0.5em;
-		font-family: "Raleway", "Sans serif";
-		font-size: 1em;
-		font-weight: bold;
-		text-align: left;
-		width: 80%;
-	}
-	
-	.imagesdescsubalt /*Prix de l'hebergement dans les plus populaires*/
-	{
-		padding-top: 0.5em;
-		padding-bottom: 2em;
-		font-family: "Raleway", "Sans serif";
-	}
-	
-	.staron /*Etoile bleue (Activée)*/
-	{
-		color: #0065FC;
-		margin-left: auto;
-	}
-	
-	.staroff /*Etoile grise (Non activée)*/
-	{
-		background-color: #FFF;
-		color: #F2F2F2;
-		margin-left: -0.2em;
-	}
-	
-	.seemore /*Partie Afficher plus*/
-	{
-		display: grid;
-		font-weight: bold;
-		width: 20em;
-		margin: 1.3em;
-		max-width: fit-content;
-		font-size: large;
-	}
-	
-	.seemore:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/
-	{
-		text-decoration: underline;
-		cursor: pointer;
-	}
-	
-	.backfamous
-	{
-		background-color: #F2F2F2;
-	}
-
-	.activity
-	{
-		width: 95%;
-		margin: 0em;
-		justify-content: center;
-	}
-	
-	.populaires /*Partie les plus populaires*/
-	{
-		background-color: #F2F2F2;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		
-	}
-	.acollumn1 /*Colonne 1*/
-	{
-		max-width: 25%;
-		max-height: 40em;
-	}
-	.acollumn2 /*Colonne 2*/
-	{
-		max-width: 25%;
-		max-height: 40em;
-	}
-	.acollumn3 /*Colonne 3*/
-	{
-		max-width: 25%;
-		max-height: 40em;
-	}
-	.acollumn4 /*Colonne 4*/
-	{
-		max-width: 25%;
-		max-height: 40em;
-	}
-	
-	.imagesa1 /*Image 1*/
-	{
-		object-fit: cover;
-		border-top-left-radius: 1.4em;
-		border-top-right-radius: 1.4em;
-		height: 33em;
-		width: 100%;
-		justify-content: center;
-	}
-	
-	.imagesa21 /*Image 2*/
-	{
-		object-fit: cover;
-		border-top-left-radius: 1.4em;
-		border-top-right-radius: 1.4em;
-		height: 16em;
-		width: 100%;
-	}
-	
-	.imagesa22 /*Image 3*/
-	{
-		object-fit: cover;
-		border-top-left-radius: 1.4em;
-		border-top-right-radius: 1.4em;
-		height: 12.8em;
-		width: 100%;
-	}
-	
-	.imagesa3 /*Image 4*/
-	{
-		object-fit: cover;
-		border-top-left-radius: 1.4em;
-		border-top-right-radius: 1.4em;
-		height: 31.7em;
-		width: 100%;
-	}
-	
-	.imagesa41 /*Image 5*/
-	{
-		object-fit: cover;
-		border-top-left-radius: 1.4em;
-		border-top-right-radius: 1.4em;
-		height: 12.8em;
-		width: 100%;
-	}
-	
-	.imagesa42 /*Image 6*/
-	{
-		object-fit: cover;
-		border-top-left-radius: 1.4em;
-		border-top-right-radius: 1.4em;
-		height: 16em;
-		width: 100%;
-	}
-	
-.producta /*Produit de la partie activités*/
-{
-	border-bottom: solid #FFF 0.9em;
-	background-color: #FFF;
-	border-radius: 1.4em;
-	margin: 1.3em;
-	box-shadow: 0px 0px 50px rgb(209, 209, 209);
-	width: 90%;
-}
-	
-	.imagesdesca /*Description de l'image dans la partie activités*/
-	{
-		font-family: "Raleway", "Sans serif";
-		font-weight: bold;
-		font-size: medium;
-		padding-left: 1em;
-		padding-top: 0.5em;
-	}
-	
-	/*Section Footer*/
-	footer /*Partie globale du footer*/
-	{
-		background-color: #F2F2F2;
-	}
-	
-	.foot /*Partie centrée du footer*/
-	{
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		padding-top: 1em;
-		padding-bottom: 1em;
-		display: flex;
-	}
-
-	.about /*Partie à propos*/
-	{
-		width: 33%;
-	}
-
-	.noshebergements /*Partie Nos Hebergements*/
-	{
-		width: 33%;
-	}
-
-	.help /*Partie Aide*/
-	{
-		width: 34%;
-	}
-	
-	.clickeable:hover /*Faire en sorte que le bouton réagisse lorsque l'on passe la souris dessus*/
-	{
-		cursor: pointer;
-		text-decoration: underline;
-	}
-	
-	.clickeable /*Faire en sorte que le texte ne prenne pas toute la place dans sa colonne*/
-	{
-		max-width: fit-content;
-		text-decoration: none;
-		color: black;
-		display: flex;
-		padding-bottom: 1em;
-	}
-
-
-}
-
 
 /* 
 object-fit: cover; -permet d'arrondir l'image.
