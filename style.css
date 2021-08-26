@@ -723,9 +723,6 @@ body /*Fond de la page entière*/ {
     padding-left: 7em;
   }
 
-  .hflex /*Faire en sorte que le display soit mis en flex*/ {
-  }
-
   .hebergements /*Partie hebergements à Marseille*/ {
     border-radius: 1.8em;
     width: 76%;
